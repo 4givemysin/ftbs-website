@@ -1,8 +1,12 @@
 import { InteriorPageTemplate } from "@/components/templates/InteriorPageTemplate";
 import { ContentSection } from "@/components/sections/ContentSection";
+import { AboutSubNav } from "@/components/layout/AboutSubNav";
+import { TestimonialsSection } from "@/components/marketing/TestimonialsSection";
 import { Card } from "@/components/ui/Card";
+import { Button } from "@/components/ui/Button";
 import { createMetadataFromPageConfig } from "@/lib/seo";
 import { getPageSeo } from "@/lib/pages";
+import { routes } from "@/lib/routes";
 import { aboutContent } from "@/lib/content/about";
 
 export const metadata = createMetadataFromPageConfig(getPageSeo("about"));
@@ -11,7 +15,9 @@ export default function AboutPage() {
   const { banner, whoWeAre, bgw, missionItems, leadership, cta } = aboutContent;
 
   return (
-    <InteriorPageTemplate banner={banner} cta={cta}>
+    <>
+      <AboutSubNav />
+      <InteriorPageTemplate banner={banner} cta={cta}>
       <ContentSection title={whoWeAre.title} alt={false}>
         <div className="mt-0 grid gap-10 lg:grid-cols-2 lg:items-start">
           <div>
@@ -53,9 +59,31 @@ export default function AboutPage() {
       </ContentSection>
 
       <ContentSection
+        eyebrow="Credentials"
+        title="Company credibility resources"
+        description="Review FTBS capability statement, certifications, and company profile materials for procurement and partnership evaluation."
+        alt
+      >
+        <div className="flex flex-wrap gap-3">
+          <Button href={routes.capabilities.path} variant="outline">
+            Capability Statement
+          </Button>
+          <Button href={routes.certifications.path} variant="outline">
+            Certifications
+          </Button>
+          <Button href={routes.companyProfile.path} variant="outline">
+            Company Profile
+          </Button>
+        </div>
+      </ContentSection>
+
+      <TestimonialsSection alt={false} />
+
+      <ContentSection
         eyebrow={leadership.eyebrow}
         title={leadership.title}
         description={leadership.description}
+        alt
       >
         <Card className="mt-0 lg:p-8">
           {leadership.paragraphs.map((paragraph) => (
@@ -69,5 +97,6 @@ export default function AboutPage() {
         </Card>
       </ContentSection>
     </InteriorPageTemplate>
+    </>
   );
 }

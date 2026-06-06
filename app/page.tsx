@@ -1,10 +1,14 @@
 import { MarketingPageTemplate } from "@/components/templates/MarketingPageTemplate";
 import { ContentSection } from "@/components/sections/ContentSection";
 import { ServicesGrid } from "@/components/marketing/ServicesGrid";
+import { CaseStudiesSection } from "@/components/marketing/CaseStudiesSection";
+import { TestimonialsSection } from "@/components/marketing/TestimonialsSection";
 import { Section } from "@/components/ui/Section";
 import { Card } from "@/components/ui/Card";
+import { Button } from "@/components/ui/Button";
 import { createMetadataFromPageConfig } from "@/lib/seo";
 import { getPageSeo } from "@/lib/pages";
+import { routes } from "@/lib/routes";
 import { homeContent } from "@/lib/content/home";
 
 export const metadata = createMetadataFromPageConfig(getPageSeo("home"));
@@ -27,6 +31,10 @@ export default function HomePage() {
       <Section>
         <ServicesGrid limit={4} />
       </Section>
+
+      <CaseStudiesSection limit={3} alt />
+
+      <TestimonialsSection alt={false} />
 
       <ContentSection
         eyebrow="Why FTBS"
@@ -54,10 +62,16 @@ export default function HomePage() {
         eyebrow={bgw.eyebrow}
         title={bgw.title}
         description={bgw.description}
+        alt
       >
         <blockquote className="rounded-lg border-l-4 border-brand-gold bg-surface-alt p-6 text-base leading-relaxed text-zinc-700">
           {bgw.quote}
         </blockquote>
+        <div className="mt-8">
+          <Button href={routes.capabilities.path} variant="outline">
+            View Capability Statement
+          </Button>
+        </div>
       </ContentSection>
     </MarketingPageTemplate>
   );

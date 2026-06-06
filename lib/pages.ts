@@ -33,6 +33,36 @@ export const pageSeo: Record<string, PageSeoConfig> = {
     description:
       "Contact FTBS to discuss construction project management, infrastructure partnerships, technology consulting, or request a quote.",
   },
+  capabilities: {
+    routeKey: "capabilities",
+    title: "Capability Statement",
+    description:
+      "FTBS capability statement — core competencies in construction project management, infrastructure development, and technology consulting for government and institutional partners.",
+  },
+  projects: {
+    routeKey: "projects",
+    title: "Projects Portfolio",
+    description:
+      "Explore FTBS past performance in infrastructure, commercial construction, project management, and technology consulting. Sample project profiles available.",
+  },
+  testimonials: {
+    routeKey: "testimonials",
+    title: "Testimonials",
+    description:
+      "Client perspectives on FTBS construction project management, infrastructure delivery, and technology consulting services.",
+  },
+  certifications: {
+    routeKey: "certifications",
+    title: "Certifications & Registrations",
+    description:
+      "FTBS licenses, certifications, insurance, and professional registrations supporting construction and technology services.",
+  },
+  companyProfile: {
+    routeKey: "companyProfile",
+    title: "Company Profile Download",
+    description:
+      "Download or request FTBS company profile, capability statement, and procurement documentation for vendor review.",
+  },
 };
 
 export function getPagePath(routeKey: RouteKey): string {
@@ -49,3 +79,20 @@ export const siteDefaults = {
   url: company.url,
   locale: "en_US",
 } as const;
+
+/** SEO config for dynamic project case study pages */
+export function getProjectCaseStudySeo(project: {
+  title: string;
+  summary: string;
+  slug: string;
+}): PageSeoConfig {
+  return {
+    routeKey: "projects",
+    title: project.title,
+    description: project.summary,
+  };
+}
+
+export function getProjectCaseStudyPath(slug: string): string {
+  return `${routes.projects.path}/${slug}`;
+}

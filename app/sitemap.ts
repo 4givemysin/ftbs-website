@@ -1,14 +1,25 @@
 import type { MetadataRoute } from "next";
 import { company } from "@/lib/company";
 import { activeRoutes } from "@/lib/routes";
+import { projects } from "@/lib/projects";
+import { getProjectCaseStudyPath } from "@/lib/pages";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const lastModified = new Date();
 
-  return activeRoutes.map((route) => ({
+  const staticPages = activeRoutes.map((route) => ({
     url: `${company.url}${route.path === "/" ? "" : route.path}`,
     lastModified,
-    changeFrequency: route.path === "/" ? "weekly" : "monthly",
+    changeFrequency: route.path === "/" ? ("weekly" as const) : ("monthly" as const),
     priority: route.path === "/" ? 1 : 0.8,
   }));
+
+  const caseStudyPages = projects.map((project) => ({
+    url: `${company.url}${getProjectCaseStudyPath(project.slug)}`,
+    lastModified,
+    changeFrequency: "monthly" as const,
+    priority: 0.7,
+  }));
+
+  return [...staticPages, ...caseStudyPages];
 }
