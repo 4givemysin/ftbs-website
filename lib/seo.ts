@@ -1,7 +1,10 @@
 import type { Metadata } from "next";
 import { company } from "./company";
+import { buildSocialMetadata } from "./og/social-metadata";
 import { getPagePath, type PageSeoConfig } from "./pages";
 import type { RouteKey } from "./routes";
+
+export const metadataBase = new URL(company.url);
 
 const defaultTitle = `${company.shortName} | ${company.tagline}`;
 const defaultDescription = company.description;
@@ -20,28 +23,22 @@ export function createPageMetadata({
   noIndex = false,
 }: PageMetadataOptions = {}): Metadata {
   const pageTitle = title ? `${title} | ${company.shortName}` : defaultTitle;
-  const url = `${company.url}${path}`;
+  const social = buildSocialMetadata({
+    title: pageTitle,
+    description,
+    path: path || "/",
+  });
 
   return {
+    metadataBase,
     title: pageTitle,
     description,
     alternates: {
-      canonical: url,
+      canonical: `${company.url}${path}`,
     },
     robots: noIndex ? { index: false, follow: false } : undefined,
-    openGraph: {
-      title: pageTitle,
-      description,
-      url,
-      siteName: company.shortName,
-      type: "website",
-      locale: "en_US",
-    },
-    twitter: {
-      card: "summary_large_image",
-      title: pageTitle,
-      description,
-    },
+    openGraph: social.openGraph,
+    twitter: social.twitter,
   };
 }
 
