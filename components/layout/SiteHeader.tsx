@@ -15,7 +15,7 @@ export function SiteHeader() {
       >
         Skip to main content
       </a>
-      <Navbar onMenuOpen={() => setMenuOpen(true)} />
+      <Navbar onMenuOpen={() => setMenuOpen(true)} menuOpen={menuOpen} />
       <MobileNavigation isOpen={menuOpen} onClose={() => setMenuOpen(false)} />
     </>
   );

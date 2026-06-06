@@ -13,7 +13,7 @@ export const companyProfileContent = {
     title: "Executive overview",
     paragraphs: [
       `${company.name} (${company.shortName}) is a construction and technology services firm headquartered in ${company.address.city}, ${company.address.state}.`,
-      `${paulGibbs.name} serves as ${paulGibbs.fullTitle} and brings construction leadership, project management, and hands-on development experience to FTBS and its partners.`,
+      `${paulGibbs.name} serves as ${paulGibbs.fullTitle}. ${paulGibbs.summary}`,
       "FTBS supports government agencies, developers, and institutional partners with project management, infrastructure program support, and technology consulting designed for accountable, long-term delivery.",
     ],
   },

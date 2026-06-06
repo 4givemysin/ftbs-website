@@ -1,8 +1,10 @@
 "use client";
 
+import Link from "next/link";
 import { useActionState, type ReactNode } from "react";
 import { submitContactForm, type ContactFormState } from "@/app/contact/actions";
 import { Button } from "@/components/ui/Button";
+import { routes } from "@/lib/routes";
 
 import { inquiryTypes, projectFocusOptions } from "@/lib/inquiry-types";
 
@@ -154,6 +156,14 @@ export function ContactForm() {
           {state.message}
         </p>
       ) : null}
+
+      <p className="text-xs leading-relaxed text-zinc-500">
+        By submitting this form, you agree to our{" "}
+        <Link href={routes.privacy.path} className="font-semibold text-brand-blue hover:text-brand-navy">
+          Privacy Policy
+        </Link>
+        .
+      </p>
 
       <Button type="submit" disabled={isPending || state.success}>
         {isPending ? "Submitting..." : state.success ? "Submitted" : "Submit Inquiry"}

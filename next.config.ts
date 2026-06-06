@@ -23,6 +23,21 @@ const nextConfig: NextConfig = {
         destination: "/case-studies",
         permanent: false,
       },
+      {
+        source: "/divisions/bgw-construction",
+        destination: "/bgw",
+        permanent: true,
+      },
+      {
+        source: "/divisions/bgw-construction/:path*",
+        destination: "/bgw/:path*",
+        permanent: true,
+      },
+      {
+        source: "/divisions",
+        destination: "/bgw",
+        permanent: false,
+      },
     ];
   },
 };

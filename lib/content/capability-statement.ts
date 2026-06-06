@@ -13,7 +13,7 @@ export const capabilityStatementContent = {
     title: "Company overview",
     paragraphs: [
       `${company.name} is a professional services firm supporting complex construction and infrastructure programs with disciplined project management and technology-enabled delivery.`,
-      `${company.shortName} is led by ${paulGibbs.fullTitle} ${paulGibbs.name}, who brings construction industry leadership, project management experience, and hands-on building and development work to partnerships with government agencies, commercial developers, and institutional clients.`,
+      `${company.shortName} is led by ${paulGibbs.name}, ${paulGibbs.fullTitle}, who brings regional project management, IT infrastructure delivery, construction leadership, and hands-on electrical experience to partnerships with government agencies, commercial developers, and institutional clients.`,
     ],
   },
   missionStatement: {

@@ -11,7 +11,7 @@ export function ProjectPortfolioSections() {
 
   return (
     <div className="space-y-16">
-      <section aria-labelledby="featured-projects-heading">
+      <section aria-labelledby="featured-projects-heading" className="scroll-mt-24">
         <h2
           id="featured-projects-heading"
           className="text-2xl font-bold tracking-tight text-brand-navy"
@@ -48,7 +48,7 @@ function TrackSection({
   const projects = getProjectsByTrack(track);
 
   return (
-    <section aria-labelledby={`${track}-projects-heading`}>
+    <section id={`track-${track}`} aria-labelledby={`${track}-projects-heading`} className="scroll-mt-24">
       <h2
         id={`${track}-projects-heading`}
         className="text-2xl font-bold tracking-tight text-brand-navy"

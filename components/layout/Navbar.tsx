@@ -1,20 +1,20 @@
 import Link from "next/link";
 import { ContentContainer } from "@/components/ui/ContentContainer";
 import { Logo } from "@/components/brand/Logo";
-import { BgwBadge } from "@/components/brand/BgwBadge";
+import { company } from "@/lib/company";
 import { mainNavLinks, primaryCta } from "@/lib/navigation";
 
 type NavbarProps = {
   onMenuOpen: () => void;
+  menuOpen?: boolean;
 };
 
-export function Navbar({ onMenuOpen }: NavbarProps) {
+export function Navbar({ onMenuOpen, menuOpen = false }: NavbarProps) {
   return (
     <header className="sticky top-0 z-40 border-b border-border bg-white/95 backdrop-blur supports-[backdrop-filter]:bg-white/90">
       <ContentContainer className="flex h-16 items-center justify-between gap-4">
         <div className="flex min-w-0 items-center gap-3">
-          <Logo showTagline={false} className="shrink-0" />
-          <BgwBadge className="hidden lg:inline-flex" />
+          <Logo showTagline className="shrink-0" />
         </div>
 
         <nav
@@ -36,13 +36,19 @@ export function Navbar({ onMenuOpen }: NavbarProps) {
           >
             {primaryCta.label}
           </Link>
+          <a
+            href={`tel:${company.phone.replace(/\D/g, "")}`}
+            className="hidden h-11 items-center px-2 text-sm font-semibold text-brand-navy transition-colors hover:text-brand-blue xl:inline-flex"
+          >
+            {company.phone}
+          </a>
         </nav>
 
         <button
           type="button"
-          className="inline-flex min-h-11 min-w-11 items-center justify-center rounded-md border border-border px-3 text-sm font-semibold text-brand-navy lg:hidden"
+          className="inline-flex h-11 w-11 items-center justify-center rounded-md border border-border px-3 text-sm font-semibold text-brand-navy lg:hidden"
           aria-label="Open menu"
-          aria-expanded={false}
+          aria-expanded={menuOpen}
           aria-controls="mobile-navigation"
           onClick={onMenuOpen}
         >

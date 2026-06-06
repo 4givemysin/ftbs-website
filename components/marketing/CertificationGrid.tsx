@@ -6,6 +6,7 @@ import {
   currentCertifications,
   futureCertificationGoals,
   industryStandards,
+  leadershipCertifications,
   type Certification,
 } from "@/lib/certifications";
 
@@ -20,38 +21,62 @@ function statusBadge(status: Certification["status"]) {
   }
 }
 
+function CertificationCard({ item }: { item: Certification }) {
+  return (
+    <Card className="flex h-full flex-col">
+      <div className="flex flex-wrap items-center gap-2">
+        {statusBadge(item.status)}
+        {item.isSample ? <Badge variant="default">Sample</Badge> : null}
+      </div>
+      <h3 className="mt-4 text-lg font-semibold text-brand-navy">{item.name}</h3>
+      <p className="mt-1 text-xs font-semibold uppercase tracking-wide text-brand-blue">
+        {item.issuer}
+      </p>
+      <p className="mt-3 flex-1 text-sm leading-relaxed text-zinc-600">
+        {item.description}
+      </p>
+    </Card>
+  );
+}
+
 export function CertificationGrid() {
   return (
     <div className="space-y-16">
+      <section aria-labelledby="leadership-certifications-heading">
+        <h2
+          id="leadership-certifications-heading"
+          className="text-xl font-bold text-brand-navy"
+        >
+          Leadership certifications
+        </h2>
+        <p className="mt-2 text-sm leading-relaxed text-zinc-600">
+          Verified certifications held by Paul Gibbs, CEO of FTBS and President of BGW
+          Construction Company.
+        </p>
+        <ul className="mt-8 grid gap-6 md:grid-cols-3">
+          {leadershipCertifications.map((item) => (
+            <li key={item.id}>
+              <CertificationCard item={item} />
+            </li>
+          ))}
+        </ul>
+      </section>
+
       <section aria-labelledby="current-certifications-heading">
         <h2
           id="current-certifications-heading"
           className="text-xl font-bold text-brand-navy"
         >
-          Current certifications
+          Company credentials
         </h2>
         <p className="mt-2 text-sm leading-relaxed text-zinc-600">
-          Only verified credentials are published. Placeholder sections indicate
+          Corporate insurance and registration documentation. Placeholder sections indicate
           where documentation will appear once confirmed.
         </p>
         <ul className="mt-8 grid gap-6 md:grid-cols-2">
           {currentCertifications.map((item) => (
             <li key={item.id}>
-              <Card className="flex h-full flex-col">
-                <div className="flex flex-wrap items-center gap-2">
-                  {statusBadge(item.status)}
-                  <Badge variant="default">Sample</Badge>
-                </div>
-                <h3 className="mt-4 text-lg font-semibold text-brand-navy">
-                  {item.name}
-                </h3>
-                <p className="mt-1 text-xs font-semibold uppercase tracking-wide text-brand-blue">
-                  {item.issuer}
-                </p>
-                <p className="mt-3 flex-1 text-sm leading-relaxed text-zinc-600">
-                  {item.description}
-                </p>
-              </Card>
+              <CertificationCard item={item} />
             </li>
           ))}
         </ul>

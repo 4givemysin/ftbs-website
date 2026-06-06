@@ -14,9 +14,13 @@ import {
 import {
   inquiryTypes,
   projectFocusOptions,
+  bgwProjectFocusOptions,
   type InquiryType,
   type ProjectFocus,
+  type BgwProjectFocus,
 } from "@/lib/inquiry-types";
+
+const allProjectFocusOptions = [...projectFocusOptions, ...bgwProjectFocusOptions] as const;
 
 export type SendContactEmailsResult =
   | { ok: true; confirmationSent: boolean }
@@ -71,10 +75,12 @@ export function isValidInquiryType(value: string): value is InquiryType {
   return inquiryTypes.includes(value as InquiryType);
 }
 
-export function parseProjectFocus(values: FormDataEntryValue[]): ProjectFocus[] {
+export function parseProjectFocus(
+  values: FormDataEntryValue[],
+): (ProjectFocus | BgwProjectFocus)[] {
   return values
     .map((value) => String(value))
-    .filter((value): value is ProjectFocus =>
-      projectFocusOptions.includes(value as ProjectFocus),
+    .filter((value): value is ProjectFocus | BgwProjectFocus =>
+      (allProjectFocusOptions as readonly string[]).includes(value),
     );
 }

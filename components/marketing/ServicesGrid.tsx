@@ -1,25 +1,55 @@
 import Link from "next/link";
 import { Badge } from "@/components/ui/Badge";
 import { Card } from "@/components/ui/Card";
-import { services } from "@/lib/services";
+import { services, type Service } from "@/lib/services";
 import { routes } from "@/lib/routes";
 import { SectionHeader } from "./SectionHeader";
 
 type ServicesGridProps = {
   showHeader?: boolean;
   limit?: number;
+  category?: Service["category"];
 };
 
-export function ServicesGrid({ showHeader = true, limit }: ServicesGridProps) {
-  const items = limit ? services.slice(0, limit) : services;
+export function ServicesGrid({
+  showHeader = true,
+  limit,
+  category,
+}: ServicesGridProps) {
+  const filtered = category
+    ? services.filter((service) => service.category === category)
+    : services;
+  const items = limit ? filtered.slice(0, limit) : filtered;
+
+  const headerCopy =
+    category === "technology"
+      ? {
+          eyebrow: "Technology Services",
+          title: "IT infrastructure, consulting, and digital systems",
+          description:
+            "Practical technology services backed by nationwide field experience — network deployment, systems integration, and operational consulting.",
+        }
+      : category === "construction"
+        ? {
+            eyebrow: "Construction Services",
+            title: "Project management and construction delivery",
+            description:
+              "Disciplined construction oversight for agencies, developers, and institutional partners — including infrastructure work through BGW Construction.",
+          }
+        : {
+            eyebrow: "What We Deliver",
+            title: "Technology and construction services under one trusted partner",
+            description:
+              "FTBS supports project owners, agencies, and developers with IT infrastructure, technology consulting, and disciplined project delivery.",
+          };
 
   return (
     <div>
       {showHeader ? (
         <SectionHeader
-          eyebrow="What We Deliver"
-          title="Construction and technology services under one trusted partner"
-          description="FTBS supports project owners, agencies, and developers with disciplined delivery and practical systems that keep work moving forward."
+          eyebrow={headerCopy.eyebrow}
+          title={headerCopy.title}
+          description={headerCopy.description}
         />
       ) : null}
 

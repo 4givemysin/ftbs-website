@@ -2,6 +2,7 @@ import { InteriorPageTemplate } from "@/components/templates/InteriorPageTemplat
 import { ContentSection } from "@/components/sections/ContentSection";
 import { TestimonialsSection } from "@/components/marketing/TestimonialsSection";
 import { PresidentLetter } from "@/components/marketing/PresidentLetter";
+import { LeadershipResume } from "@/components/marketing/LeadershipResume";
 import { Card } from "@/components/ui/Card";
 import { Button } from "@/components/ui/Button";
 import { createMetadataFromPageConfig } from "@/lib/seo";
@@ -39,6 +40,11 @@ export default function AboutPage() {
             <h2 className="text-lg font-semibold text-brand-navy">{bgw.title}</h2>
             <p className="mt-3 text-sm leading-relaxed text-zinc-600">{bgw.focus}</p>
             <p className="mt-4 text-sm leading-relaxed text-zinc-600">{bgw.paragraph}</p>
+            <div className="mt-6">
+              <Button href={routes.bgw.path} variant="outline">
+                Explore BGW Construction
+              </Button>
+            </div>
           </Card>
         </div>
       </ContentSection>
@@ -97,6 +103,16 @@ export default function AboutPage() {
         alt
       >
         <PresidentLetter fullLetter />
+      </ContentSection>
+
+      <ContentSection
+        eyebrow="Experience"
+        title={leadership.resumeTitle}
+        description={leadership.resumeDescription}
+        alt={false}
+        id="leadership-resume"
+      >
+        <LeadershipResume />
       </ContentSection>
     </InteriorPageTemplate>
     </>

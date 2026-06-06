@@ -7,6 +7,7 @@ import { Card } from "@/components/ui/Card";
 import { Button } from "@/components/ui/Button";
 import { createMetadataFromPageConfig } from "@/lib/seo";
 import { getPagePath, getPageSeo } from "@/lib/pages";
+import { routes } from "@/lib/routes";
 import { companyProfileContent } from "@/lib/content/company-profile";
 
 export const metadata = createMetadataFromPageConfig(getPageSeo("companyProfile"));
@@ -36,6 +37,11 @@ export default function CompanyProfilePage() {
               {paragraph}
             </p>
           ))}
+          <div className="mt-8">
+            <Button href={`${routes.about.path}#leadership-resume`} variant="outline">
+              View Paul Gibbs — Full Resume
+            </Button>
+          </div>
         </ContentSection>
 
         <ContentSection title={content.companyHistory.title} alt>

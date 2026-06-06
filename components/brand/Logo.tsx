@@ -23,7 +23,7 @@ export function Logo({
         aria-hidden
         className="flex h-10 w-10 shrink-0 items-center justify-center rounded-md bg-brand-navy shadow-sm"
       >
-        <svg viewBox="0 0 40 40" className="h-7 w-7" role="img" aria-label="">
+        <svg viewBox="0 0 40 40" className="h-7 w-7" aria-hidden="true">
           <rect x="4" y="4" width="14" height="14" rx="2" fill="#b8860b" />
           <rect x="22" y="4" width="14" height="14" rx="2" fill="#2e5a8b" />
           <rect x="4" y="22" width="14" height="14" rx="2" fill="#2e5a8b" />

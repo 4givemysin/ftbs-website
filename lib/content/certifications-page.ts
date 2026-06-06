@@ -18,7 +18,7 @@ export const certificationsPageContent = {
       "Qualified partners may request certificates of insurance, registration details, or capability materials for procurement review.",
     primaryLabel: "Contact FTBS",
     primaryHref: routes.contact.path,
-    secondaryLabel: "Capability Statement",
-    secondaryHref: routes.capabilities.path,
+    secondaryLabel: "BGW Capability Statement",
+    secondaryHref: routes.bgwCapabilityStatement.path,
   },
 } as const;

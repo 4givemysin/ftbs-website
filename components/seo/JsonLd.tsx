@@ -3,6 +3,7 @@ import { paulGibbs } from "@/lib/leadership";
 import { portfolioProjects } from "@/lib/projects";
 import { caseStudies } from "@/lib/case-studies";
 import { testimonials } from "@/lib/testimonials";
+import { allFaqItems } from "@/lib/content/faq";
 import { routes } from "@/lib/routes";
 import { getCaseStudyPath } from "@/lib/pages";
 
@@ -35,6 +36,7 @@ export function OrganizationJsonLd() {
       jobTitle: paulGibbs.fullTitle,
       email: paulGibbs.email,
       telephone: paulGibbs.phone,
+      knowsLanguage: [...paulGibbs.languages],
     },
   };
 
@@ -169,6 +171,53 @@ export function TestimonialsJsonLd() {
           name: company.shortName,
         },
       },
+    })),
+  };
+
+  return (
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+    />
+  );
+}
+
+export function FaqPageJsonLd() {
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: allFaqItems.map((item) => ({
+      "@type": "Question",
+      name: item.question,
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: item.answer,
+      },
+    })),
+  };
+
+  return (
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+    />
+  );
+}
+
+type BreadcrumbItem = {
+  name: string;
+  path: string;
+};
+
+export function BreadcrumbJsonLd({ items }: { items: BreadcrumbItem[] }) {
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: items.map((item, index) => ({
+      "@type": "ListItem",
+      position: index + 1,
+      name: item.name,
+      item: `${company.url}${item.path === "/" ? "" : item.path}`,
     })),
   };
 

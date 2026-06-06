@@ -6,13 +6,13 @@ export const aboutContent = {
   banner: {
     eyebrow: "About FTBS",
     title: "Finesse Technology Business Solutions",
-    description: `${company.name} supports construction and infrastructure partners with project management expertise and technology-driven business solutions.`,
+    description: `${company.name} supports partners with IT infrastructure, technology consulting, and construction project management — combining systems expertise with disciplined field delivery.`,
   },
   whoWeAre: {
     title: "Who we are",
     paragraphs: [
-      "FTBS was built on a simple premise: complex construction and infrastructure work requires more than execution — it requires leadership, systems, and communication that keep every stakeholder aligned.",
-      "We serve government agencies, developers, and institutional clients who need a professional partner capable of managing scope, schedule, quality, and reporting with consistency.",
+      "FTBS was built on a simple premise: organizations running complex construction and infrastructure programs need technology, leadership, and communication working together — not in silos.",
+      "We deploy and support IT infrastructure, modernize project systems, and manage construction delivery for government agencies, developers, and institutional clients who require professional accountability.",
     ],
   },
   bgw: {
@@ -41,7 +41,10 @@ export const aboutContent = {
     eyebrow: "Leadership",
     title: `${paulGibbs.name}, ${paulGibbs.fullTitle}`,
     description:
-      "Construction industry leadership, project management, and hands-on building experience — dedicated to quality infrastructure and community development.",
+      "Regional project management, construction leadership, IT infrastructure delivery, and hands-on electrical experience — dedicated to quality infrastructure and community development.",
+    resumeTitle: "Professional background",
+    resumeDescription:
+      "Executive resume summary, work history, education, and certifications for procurement and partnership review.",
   },
   cta: {
     title: "Learn how FTBS can support your organization",

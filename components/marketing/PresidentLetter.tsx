@@ -1,4 +1,5 @@
 import { Card } from "@/components/ui/Card";
+import { Badge } from "@/components/ui/Badge";
 import { BgwBadge } from "@/components/brand/BgwBadge";
 import { paulGibbs, presidentLetter } from "@/lib/leadership";
 
@@ -17,7 +18,15 @@ export function PresidentLetter({ fullLetter = true }: PresidentLetterProps) {
           <p className="mt-1 text-sm font-semibold text-brand-blue">
             {paulGibbs.fullTitle}
           </p>
+          <p className="mt-1 text-xs text-zinc-500">{paulGibbs.resumeHeadline}</p>
           <p className="mt-4 text-sm leading-relaxed text-zinc-600">{paulGibbs.bio}</p>
+          <div className="mt-4 flex flex-wrap gap-2">
+            {paulGibbs.professionalCertifications.map((cert) => (
+              <Badge key={cert} variant="construction">
+                {cert}
+              </Badge>
+            ))}
+          </div>
           <dl className="mt-6 grid gap-3 sm:grid-cols-2 text-sm">
             <div>
               <dt className="font-semibold text-brand-navy">Phone</dt>
@@ -40,6 +49,21 @@ export function PresidentLetter({ fullLetter = true }: PresidentLetterProps) {
                   {paulGibbs.email}
                 </a>
               </dd>
+            </div>
+            <div>
+              <dt className="font-semibold text-brand-navy">Website</dt>
+              <dd className="mt-1">
+                <a
+                  href={paulGibbs.website}
+                  className="text-brand-blue hover:text-brand-navy"
+                >
+                  {paulGibbs.website.replace("https://", "")}
+                </a>
+              </dd>
+            </div>
+            <div>
+              <dt className="font-semibold text-brand-navy">Languages</dt>
+              <dd className="mt-1 text-zinc-600">{paulGibbs.languages.join(" · ")}</dd>
             </div>
           </dl>
         </div>

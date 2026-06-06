@@ -59,7 +59,7 @@ export function TestimonialsSection({
                   <Badge variant="default">Sample</Badge>
                   <Badge variant="technology">{item.industry}</Badge>
                 </div>
-                <blockquote className="mt-4 flex-1 text-sm leading-relaxed text-zinc-700">
+                <blockquote className="mt-4 flex-1 border-l-2 border-brand-gold-accent pl-4 text-sm leading-relaxed text-zinc-700">
                   &ldquo;{item.quote}&rdquo;
                 </blockquote>
                 <footer className="mt-6 border-t border-border pt-4">

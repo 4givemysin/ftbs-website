@@ -1,9 +1,9 @@
 import { company } from "./company";
 import { presidentMissionExcerpt } from "./leadership";
+import { routes } from "./routes";
 
 /**
  * BGW Construction Company division metadata.
- * Expanded in Phase 3 with dedicated pages and gallery content.
  */
 export const bgwDivision = {
   id: "bgw-construction",
@@ -11,6 +11,7 @@ export const bgwDivision = {
   shortName: "BGW",
   tagline: "Infrastructure built for generations",
   focus: company.division.focus,
+  path: routes.bgw.path,
   pillars: [
     "Road and transportation infrastructure",
     "Commercial and public buildings",
@@ -24,6 +25,10 @@ export const bgwDivision = {
     "Infrastructure partners",
     "Community organizations",
   ],
-  /** Planned route — page built in Phase 3 */
-  plannedPath: "/divisions/bgw-construction",
+  serviceVerticals: [
+    { label: "Infrastructure", href: routes.bgwInfrastructure.path },
+    { label: "Commercial", href: routes.bgwCommercial.path },
+    { label: "Residential", href: routes.bgwResidential.path },
+    { label: "Future Development", href: routes.bgwFutureDevelopment.path },
+  ],
 } as const;

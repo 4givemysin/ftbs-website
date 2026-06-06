@@ -20,7 +20,7 @@ export default function ServicesPage() {
         <ServicesGrid showHeader={false} />
       </Section>
 
-      {serviceCategories.map((category) => {
+      {serviceCategories.map((category, index) => {
         const categoryServices = services.filter(
           (service) => service.category === category.id,
         );
@@ -30,11 +30,11 @@ export default function ServicesPage() {
             key={category.id}
             eyebrow={category.label}
             title={
-              category.id === "construction"
-                ? "Built for complex project environments"
-                : "Technology that supports smarter operations"
+              category.id === "technology"
+                ? "Technology that supports smarter operations"
+                : "Built for complex project environments"
             }
-            alt={category.id === "technology"}
+            alt={index % 2 === 1}
           >
             <div className="mt-0 space-y-8">
               {categoryServices.map((service) => (
@@ -102,7 +102,7 @@ export default function ServicesPage() {
           {processSteps.map((step) => (
             <li key={step.step}>
               <Card>
-                <p className="text-sm font-bold text-brand-gold">{step.step}</p>
+                <p className="text-sm font-bold text-brand-blue">{step.step}</p>
                 <h3 className="mt-3 text-lg font-semibold text-brand-navy">
                   {step.title}
                 </h3>

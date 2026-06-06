@@ -11,9 +11,9 @@ export type PageSeoConfig = {
 export const pageSeo: Record<string, PageSeoConfig> = {
   home: {
     routeKey: "home",
-    title: "Construction Project Management & Technology Solutions",
+    title: "Technology & Construction Project Management",
     description:
-      "FTBS delivers construction project management, infrastructure support, and technology solutions for government agencies, developers, and institutional partners.",
+      "FTBS delivers IT infrastructure, technology consulting, and construction project management for government agencies, developers, and institutional partners.",
   },
   about: {
     routeKey: "about",
@@ -68,6 +68,78 @@ export const pageSeo: Record<string, PageSeoConfig> = {
     title: "Company Profile",
     description:
       "FTBS company profile with executive overview, history, services, growth vision, and download request for procurement partners.",
+  },
+  faq: {
+    routeKey: "faq",
+    title: "FAQ",
+    description:
+      "Frequently asked questions about FTBS services, BGW Construction, government readiness, and how to contact our team.",
+  },
+  privacy: {
+    routeKey: "privacy",
+    title: "Privacy Policy",
+    description:
+      "FTBS privacy policy covering contact form data, email delivery, analytics, and how we protect your information.",
+  },
+  terms: {
+    routeKey: "terms",
+    title: "Terms of Service",
+    description:
+      "Terms of service for using the FTBS website, including acceptable use, disclaimers, and limitations of liability.",
+  },
+  cookies: {
+    routeKey: "cookies",
+    title: "Cookie Policy",
+    description:
+      "FTBS cookie policy explaining how cookies and analytics technologies may be used on our website.",
+  },
+  bgw: {
+    routeKey: "bgw",
+    title: "BGW Construction Company",
+    description:
+      "BGW Construction Company — infrastructure, commercial, and residential construction division of FTBS. Roads, buildings, housing, and public works.",
+  },
+  bgwInfrastructure: {
+    routeKey: "bgwInfrastructure",
+    title: "BGW Infrastructure Services",
+    description:
+      "BGW Construction infrastructure services — roads, transportation, public buildings, and essential public works for government and developer partners.",
+  },
+  bgwCommercial: {
+    routeKey: "bgwCommercial",
+    title: "BGW Commercial Construction",
+    description:
+      "BGW Construction commercial buildings and facilities — code-compliant delivery, schedule discipline, and professional reporting.",
+  },
+  bgwResidential: {
+    routeKey: "bgwResidential",
+    title: "BGW Residential Construction",
+    description:
+      "BGW Construction residential and housing development — community-focused builds with durable construction quality.",
+  },
+  bgwFutureDevelopment: {
+    routeKey: "bgwFutureDevelopment",
+    title: "BGW Future Development",
+    description:
+      "BGW Construction future development vision — long-term infrastructure priorities and partnership opportunities.",
+  },
+  bgwProjects: {
+    routeKey: "bgwProjects",
+    title: "BGW Project Gallery",
+    description:
+      "BGW Construction project gallery — sample infrastructure, commercial, and residential project profiles.",
+  },
+  bgwCapabilityStatement: {
+    routeKey: "bgwCapabilityStatement",
+    title: "BGW Construction Capability Statement",
+    description:
+      "BGW Construction capability statement for government and commercial procurement — core competencies and readiness.",
+  },
+  bgwInquiry: {
+    routeKey: "bgwInquiry",
+    title: "BGW Construction Inquiry",
+    description:
+      "Submit a BGW Construction inquiry for infrastructure, commercial, residential, or public works projects.",
   },
 };
 

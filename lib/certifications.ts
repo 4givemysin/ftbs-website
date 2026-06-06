@@ -6,10 +6,38 @@ export type Certification = {
   issuer: string;
   description: string;
   status: CertificationStatus;
-  /** Only true for layout placeholders — not claimed credentials */
-  isSample: true;
+  /** Layout placeholders only — not claimed credentials */
+  isSample?: boolean;
   renewalNote?: string;
 };
+
+/** Verified certifications held by Paul Gibbs (BGW President / FTBS CEO) */
+export const leadershipCertifications: Certification[] = [
+  {
+    id: "osha-10-construction",
+    name: "OSHA 10 Construction Safety",
+    issuer: "OSHA Authorized Training Program",
+    description:
+      "Construction safety certification held by Paul Gibbs, President of BGW Construction Company and CEO of FTBS.",
+    status: "verified",
+  },
+  {
+    id: "epa-hvac-type-1-2",
+    name: "EPA HVAC Type 1 & 2",
+    issuer: "U.S. Environmental Protection Agency",
+    description:
+      "HVAC refrigerant handling certification supporting mechanical and facilities-related construction coordination.",
+    status: "verified",
+  },
+  {
+    id: "certified-pool-operator",
+    name: "Certified Pool Operator",
+    issuer: "National Swimming Pool Foundation",
+    description:
+      "Facilities operations certification applicable to institutional and commercial facility programs.",
+    status: "verified",
+  },
+];
 
 export const currentCertifications: Certification[] = [
   {
@@ -57,7 +85,7 @@ export const complianceStandards = [
   {
     title: "OSHA-aligned safety practices",
     description:
-      "Jobsite safety protocols aligned with OSHA standards. Formal certification listings will be published only when verified.",
+      "Jobsite safety protocols aligned with OSHA standards. BGW leadership holds OSHA 10 Construction Safety certification.",
   },
   {
     title: "Document control & reporting",

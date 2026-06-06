@@ -14,7 +14,7 @@ import { homeContent } from "@/lib/content/home";
 export const metadata = createMetadataFromPageConfig(getPageSeo("home"));
 
 export default function HomePage() {
-  const { hero, credentials, values, bgw } = homeContent;
+  const { hero, credentials, technology, values, bgw } = homeContent;
 
   return (
     <MarketingPageTemplate hero={hero}>
@@ -28,8 +28,34 @@ export default function HomePage() {
         </div>
       </Section>
 
+      <ContentSection
+        eyebrow={technology.eyebrow}
+        title={technology.title}
+        description={technology.description}
+      >
+        <ul className="grid gap-6 sm:grid-cols-2">
+          {technology.highlights.map((item) => (
+            <li key={item.title}>
+              <Card>
+                <h3 className="text-lg font-semibold text-brand-navy">{item.title}</h3>
+                <p className="mt-3 text-sm leading-relaxed text-zinc-600">
+                  {item.description}
+                </p>
+              </Card>
+            </li>
+          ))}
+        </ul>
+        <div className="mt-8">
+          <Button href={routes.services.path}>Explore Technology Services</Button>
+        </div>
+      </ContentSection>
+
+      <Section alt>
+        <ServicesGrid category="technology" />
+      </Section>
+
       <Section>
-        <ServicesGrid limit={4} />
+        <ServicesGrid category="construction" showHeader />
       </Section>
 
       <CaseStudiesSection limit={3} alt />
@@ -38,8 +64,8 @@ export default function HomePage() {
 
       <ContentSection
         eyebrow="Why FTBS"
-        title="Professional delivery for construction and technology needs"
-        description="We support partners who need more than a contractor — they need a team that understands accountability, communication, and long-term impact."
+        title="Professional delivery for technology and construction partners"
+        description="We support organizations that need more than a vendor — they need a team that understands systems, accountability, and long-term impact."
         alt
       >
         <ul className="grid gap-6 sm:grid-cols-2">
@@ -71,11 +97,11 @@ export default function HomePage() {
           — Paul Gibbs, President, BGW Construction Company
         </p>
         <div className="mt-8 flex flex-wrap gap-3">
-          <Button href={routes.capabilities.path} variant="outline">
-            View Capability Statement
+          <Button href={routes.bgw.path} variant="outline">
+            Explore BGW Construction
           </Button>
-          <Button href={routes.projects.path} variant="outline">
-            View Projects
+          <Button href={routes.bgwProjects.path} variant="outline">
+            Project Gallery
           </Button>
         </div>
       </ContentSection>

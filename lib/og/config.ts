@@ -37,7 +37,8 @@ export type OgPageKey =
   | "caseStudies"
   | "testimonials"
   | "certifications"
-  | "companyProfile";
+  | "companyProfile"
+  | "bgw";
 
 export type OgImageContent = {
   headline: string;
@@ -118,6 +119,13 @@ export const OG_PAGE_CONTENT: Record<OgPageKey, OgImageContent> = {
     divisionTagline: company.shortName,
     showBgw: true,
   },
+  bgw: {
+    headline: "BGW Construction Company",
+    subheadline: "Infrastructure · Commercial · Residential",
+    divisionLabel: bgwDivision.shortName,
+    divisionTagline: bgwDivision.tagline,
+    showBgw: true,
+  },
 };
 
 const PATH_TO_OG_KEY: Record<string, OgPageKey> = {
@@ -131,6 +139,7 @@ const PATH_TO_OG_KEY: Record<string, OgPageKey> = {
   "/testimonials": "testimonials",
   "/certifications": "certifications",
   "/company-profile": "companyProfile",
+  "/bgw": "bgw",
 };
 
 export function getOgImageAlt(content: OgImageContent): string {
@@ -152,6 +161,7 @@ export function getDynamicOgImagePath(pageKey: OgPageKey): string {
     testimonials: OG_IMAGE_PATHS.testimonials,
     certifications: OG_IMAGE_PATHS.certifications,
     companyProfile: OG_IMAGE_PATHS.companyProfile,
+    bgw: "/bgw/opengraph-image",
   };
   return paths[pageKey];
 }
@@ -168,6 +178,7 @@ export function getDynamicTwitterImagePath(pageKey: OgPageKey): string {
     testimonials: "/testimonials/twitter-image",
     certifications: "/certifications/twitter-image",
     companyProfile: "/company-profile/twitter-image",
+    bgw: "/bgw/twitter-image",
   };
   return paths[pageKey];
 }
@@ -176,6 +187,7 @@ export function getOgPageKeyFromPath(path: string): OgPageKey {
   const normalized = path.split("?")[0] ?? path;
   if (PATH_TO_OG_KEY[normalized]) return PATH_TO_OG_KEY[normalized];
   if (normalized.startsWith("/case-studies/")) return "caseStudies";
+  if (normalized.startsWith("/bgw")) return "bgw";
   return "home";
 }
 

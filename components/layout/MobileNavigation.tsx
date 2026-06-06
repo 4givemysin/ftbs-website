@@ -41,7 +41,7 @@ export function MobileNavigation({ isOpen, onClose }: MobileNavigationProps) {
         aria-label="Close menu"
         onClick={onClose}
       />
-      <nav className="absolute right-0 top-0 flex h-full w-full max-w-sm flex-col bg-white shadow-xl">
+      <nav className="absolute right-0 top-0 flex h-full w-full max-w-sm flex-col bg-white shadow-xl" id="mobile-navigation">
         <div className="flex items-center justify-between border-b border-border px-4 py-4">
           <span className="text-base font-bold text-brand-navy">Navigation</span>
           <button

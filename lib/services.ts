@@ -11,6 +11,40 @@ export type Service = {
 
 export const services: Service[] = [
   {
+    id: "technology-consulting",
+    title: "Technology & Business Consulting",
+    shortDescription:
+      "Operational and strategic guidance that helps construction organizations run smarter and scale with confidence.",
+    description:
+      "FTBS applies business leadership and technology expertise to help construction and infrastructure organizations improve operations, streamline workflows, and make better project decisions.",
+    capabilities: [
+      "Operational strategy and leadership",
+      "Process improvement",
+      "Vendor and systems evaluation",
+      "Business continuity planning",
+      "Executive advisory support",
+    ],
+    audience: "Construction firms, developers, and growing organizations",
+    category: "technology",
+  },
+  {
+    id: "digital-project-systems",
+    title: "Digital Project Systems & IT Infrastructure",
+    shortDescription:
+      "Network infrastructure, field IT support, and modern project systems that bring transparency to delivery.",
+    description:
+      "FTBS deploys and supports IT infrastructure — including Cisco routers, switches, and Meraki access points — alongside digital project systems for reporting, document control, and field-to-office communication.",
+    capabilities: [
+      "Cisco and Meraki network deployment",
+      "Nationwide field IT support and troubleshooting",
+      "Project reporting dashboards",
+      "Document control workflows",
+      "Training and adoption support",
+    ],
+    audience: "Multi-site operators, retailers, and project owners modernizing systems",
+    category: "technology",
+  },
+  {
     id: "project-management",
     title: "Construction Project Management",
     shortDescription:
@@ -62,43 +96,9 @@ export const services: Service[] = [
     audience: "Commercial developers, institutions, and property owners",
     category: "construction",
   },
-  {
-    id: "technology-consulting",
-    title: "Technology & Business Consulting",
-    shortDescription:
-      "Operational and strategic guidance that helps construction organizations run smarter and scale with confidence.",
-    description:
-      "FTBS applies business leadership and technology expertise to help construction and infrastructure organizations improve operations, streamline workflows, and make better project decisions.",
-    capabilities: [
-      "Operational strategy and leadership",
-      "Process improvement",
-      "Vendor and systems evaluation",
-      "Business continuity planning",
-      "Executive advisory support",
-    ],
-    audience: "Construction firms, developers, and growing organizations",
-    category: "technology",
-  },
-  {
-    id: "digital-project-systems",
-    title: "Digital Project Systems",
-    shortDescription:
-      "Modern tools and data practices that bring transparency and efficiency to project delivery.",
-    description:
-      "FTBS helps clients adopt digital project systems for reporting, document control, and field-to-office communication. We bridge construction expertise with practical technology implementation.",
-    capabilities: [
-      "Project reporting dashboards",
-      "Document control workflows",
-      "Field data collection",
-      "System integration guidance",
-      "Training and adoption support",
-    ],
-    audience: "Project owners and contractors seeking operational modernization",
-    category: "technology",
-  },
 ];
 
 export const serviceCategories = [
-  { id: "construction", label: "Construction Services" },
   { id: "technology", label: "Technology Services" },
+  { id: "construction", label: "Construction Services" },
 ] as const;

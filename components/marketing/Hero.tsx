@@ -19,7 +19,7 @@ export function Hero({
   secondaryCta = { label: "Contact FTBS", href: "/contact" },
 }: HeroProps) {
   return (
-    <section className="border-b border-border bg-white">
+    <section className="border-b border-border bg-gradient-to-b from-white to-surface-alt/60">
       <ContentContainer className="py-16 lg:py-24">
         <div className="grid gap-10 lg:grid-cols-2 lg:items-center lg:gap-16">
           <div>
@@ -45,7 +45,7 @@ export function Hero({
           <Card className="bg-surface-alt p-8 lg:p-10 shadow-none">
             <div className="space-y-6">
               <div>
-                <p className="text-xs font-semibold uppercase tracking-wide text-brand-gold">
+                <p className="text-xs font-semibold uppercase tracking-wide text-brand-blue">
                   Construction
                 </p>
                 <p className="mt-2 text-lg font-semibold text-brand-navy">
@@ -57,7 +57,7 @@ export function Hero({
                 </p>
               </div>
               <div className="border-t border-border pt-6">
-                <p className="text-xs font-semibold uppercase tracking-wide text-brand-gold">
+                <p className="text-xs font-semibold uppercase tracking-wide text-brand-blue">
                   Technology
                 </p>
                 <p className="mt-2 text-lg font-semibold text-brand-navy">
@@ -69,7 +69,7 @@ export function Hero({
                 </p>
               </div>
               <div className="border-t border-border pt-6">
-                <p className="text-xs font-semibold uppercase tracking-wide text-brand-gold">
+                <p className="text-xs font-semibold uppercase tracking-wide text-brand-blue">
                   {bgwDivision.name}
                 </p>
                 <p className="mt-2 text-sm leading-relaxed text-zinc-600">

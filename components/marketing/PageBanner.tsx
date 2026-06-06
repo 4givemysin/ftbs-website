@@ -13,7 +13,7 @@ type PageBannerProps = {
 export function PageBanner({ eyebrow, title, description }: PageBannerProps) {
   return (
     <section
-      className="border-b border-border bg-surface-alt py-12 sm:py-16 lg:py-20"
+      className="border-b border-border bg-gradient-to-b from-surface-alt to-white py-12 sm:py-16 lg:py-20"
       aria-labelledby="page-banner-title"
     >
       <ContentContainer>

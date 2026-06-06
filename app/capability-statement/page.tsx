@@ -23,9 +23,12 @@ export default function CapabilityStatementPage() {
         path={getPagePath("capabilities")}
       />
       <CredibilitySubNav />
+      <div className="capability-print">
       <InteriorPageTemplate banner={content.banner} cta={content.cta}>
-        <ContentSection title="Review notice" alt={false}>
-          <SampleContentNotice />
+        <ContentSection title="Review notice" alt={false} id="review-notice">
+          <div className="print-hide">
+            <SampleContentNotice />
+          </div>
         </ContentSection>
 
         <ContentSection title={content.companyOverview.title}>
@@ -164,6 +167,7 @@ export default function CapabilityStatementPage() {
           <CaseStudyPreviewSection />
         </ContentSection>
       </InteriorPageTemplate>
+      </div>
     </>
   );
 }

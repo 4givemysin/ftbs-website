@@ -1,9 +1,9 @@
 export const servicesContent = {
   banner: {
     eyebrow: "Our Services",
-    title: "Construction excellence and technology solutions",
+    title: "Technology solutions and construction project management",
     description:
-      "FTBS provides integrated services for partners who need disciplined project delivery and practical systems support.",
+      "FTBS provides IT infrastructure, technology consulting, digital project systems, and disciplined construction delivery for professional partners.",
   },
   processSteps: [
     {

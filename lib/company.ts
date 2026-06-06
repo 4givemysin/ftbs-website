@@ -1,9 +1,9 @@
 export const company = {
   name: "Finesse Technology Business Solutions, LLC",
   shortName: "FTBS",
-  tagline: "Construction excellence. Technology-driven delivery.",
+  tagline: "Technology solutions. Construction delivery.",
   description:
-    "FTBS delivers construction project management and technology solutions for government agencies, developers, and institutional partners.",
+    "FTBS delivers IT infrastructure, technology consulting, and construction project management for government agencies, developers, and institutional partners.",
   url: "https://ftbsllc.com",
   email: "info@ftbsllc.com",
   phone: "(954) 224-1283",

@@ -2,6 +2,7 @@ import { InteriorPageTemplate } from "@/components/templates/InteriorPageTemplat
 import { ContentSection } from "@/components/sections/ContentSection";
 import { SampleContentNotice } from "@/components/marketing/SampleContentNotice";
 import { ProjectPortfolioSections } from "@/components/marketing/ProjectPortfolioSections";
+import { PortfolioTrackNav } from "@/components/marketing/PortfolioTrackNav";
 import { TestimonialsSection } from "@/components/marketing/TestimonialsSection";
 import { PortfolioItemListJsonLd, WebPageJsonLd } from "@/components/seo/JsonLd";
 import { Card } from "@/components/ui/Card";
@@ -29,6 +30,7 @@ export default function ProjectsPage() {
         </ContentSection>
 
         <ContentSection title={intro.title} description={intro.description}>
+          <PortfolioTrackNav />
           <ProjectPortfolioSections />
         </ContentSection>
 
