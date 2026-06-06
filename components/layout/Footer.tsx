@@ -1,6 +1,9 @@
 import Link from "next/link";
 import { ContentContainer } from "@/components/ui/ContentContainer";
+import { Logo } from "@/components/brand/Logo";
+import { BgwBadge } from "@/components/brand/BgwBadge";
 import { company, formattedAddress } from "@/lib/company";
+import { paulGibbs } from "@/lib/leadership";
 import { footerNav } from "@/lib/navigation";
 
 export function Footer() {
@@ -11,8 +14,11 @@ export function Footer() {
       <ContentContainer className="py-12 lg:py-16">
         <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-4">
           <div>
-            <p className="text-lg font-bold">{company.shortName}</p>
-            <p className="mt-2 text-sm leading-relaxed text-zinc-300">
+            <Logo href="/" variant="light" showTagline={false} className="shrink-0" />
+            <div className="mt-3">
+              <BgwBadge size="md" />
+            </div>
+            <p className="mt-4 text-sm leading-relaxed text-zinc-300">
               {company.name} delivers construction project management and
               technology solutions for partners who require dependable,
               professional delivery.
@@ -64,6 +70,17 @@ export function Footer() {
                 <a href={`mailto:${company.email}`} className="hover:text-white">
                   {company.email}
                 </a>
+              </li>
+              <li>
+                <a
+                  href={`tel:${company.phone.replace(/\D/g, "")}`}
+                  className="hover:text-white"
+                >
+                  {company.phone}
+                </a>
+              </li>
+              <li>
+                {paulGibbs.name}, {paulGibbs.title}
               </li>
               <li>{formattedAddress}</li>
               <li>Division: {company.division.name}</li>

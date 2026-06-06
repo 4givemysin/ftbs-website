@@ -2,15 +2,21 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { aboutSubNav } from "@/lib/navigation";
+import { credibilityNav } from "@/lib/navigation";
 
-export function AboutSubNav() {
+const credibilityPaths = new Set(credibilityNav.map((link) => link.href));
+
+export function CredibilitySubNav() {
   const pathname = usePathname();
 
+  if (!credibilityPaths.has(pathname)) {
+    return null;
+  }
+
   return (
-    <nav aria-label="About section" className="border-b border-border bg-white">
+    <nav aria-label="Credibility resources" className="border-b border-border bg-white">
       <div className="mx-auto flex max-w-7xl gap-1 overflow-x-auto px-4 sm:px-6 lg:px-8">
-        {aboutSubNav.map((link) => {
+        {credibilityNav.map((link) => {
           const isActive = pathname === link.href;
           return (
             <Link

@@ -6,7 +6,7 @@ export const company = {
     "FTBS delivers construction project management and technology solutions for government agencies, developers, and institutional partners.",
   url: "https://ftbsllc.com",
   email: "info@ftbsllc.com",
-  phone: "",
+  phone: "(954) 224-1283",
   address: {
     street: "2274 Salem Rd SE Ste 106",
     city: "Conyers",

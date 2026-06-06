@@ -41,13 +41,13 @@ export const routes = {
     active: true,
     description: "General inquiry and contact information",
   },
-  // Phase 2
+  // Phase 2 — business credibility
   capabilities: {
-    path: "/about/capabilities",
+    path: "/capability-statement",
     label: "Capability Statement",
     phase: 2,
     active: true,
-    description: "Corporate capability statement",
+    description: "Corporate capability statement for government and commercial partners",
   },
   projects: {
     path: "/projects",
@@ -55,6 +55,13 @@ export const routes = {
     phase: 2,
     active: true,
     description: "Projects portfolio hub",
+  },
+  caseStudies: {
+    path: "/case-studies",
+    label: "Case Studies",
+    phase: 2,
+    active: true,
+    description: "Detailed case studies with challenge, solution, and results",
   },
   testimonials: {
     path: "/testimonials",
@@ -64,18 +71,18 @@ export const routes = {
     description: "Client testimonials and references",
   },
   certifications: {
-    path: "/about/certifications",
+    path: "/certifications",
     label: "Certifications",
     phase: 2,
     active: true,
-    description: "Licenses and certifications",
+    description: "Licenses, compliance standards, and certification goals",
   },
   companyProfile: {
-    path: "/about/company-profile",
+    path: "/company-profile",
     label: "Company Profile",
     phase: 2,
     active: true,
-    description: "Company profile and capability downloads",
+    description: "Company profile and procurement downloads",
   },
   faq: {
     path: "/faq",

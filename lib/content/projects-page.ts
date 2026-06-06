@@ -5,12 +5,18 @@ export const projectsPageContent = {
     eyebrow: "Past Performance",
     title: "Projects Portfolio",
     description:
-      "Explore representative construction, infrastructure, and technology engagements. Sample entries demonstrate FTBS delivery approach and reporting standards.",
+      "Representative construction, technology, and business consulting engagements. All entries are sample placeholder content until client-approved projects are published.",
   },
   intro: {
     title: "Proof of professional delivery",
     description:
-      "Our portfolio highlights the types of programs FTBS supports — from public infrastructure to institutional facilities and technology consulting. All entries below are clearly marked as sample content until client-approved projects are published.",
+      "Explore featured programs and track-specific project profiles that demonstrate how FTBS supports complex work with clarity, accountability, and measurable results.",
+  },
+  resultsSection: {
+    eyebrow: "Results & impact",
+    title: "Delivery outcomes that matter to partners",
+    description:
+      "Sample aggregate indicators below illustrate the reporting standards and impact framing FTBS applies across programs. Replace with verified metrics as approved projects are published.",
   },
   cta: {
     title: "Discuss a project or program opportunity",

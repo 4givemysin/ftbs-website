@@ -1,7 +1,8 @@
+import Link from "next/link";
 import { Button } from "@/components/ui/Button";
 import { ProjectCard } from "@/components/marketing/ProjectCard";
 import { routes } from "@/lib/routes";
-import { projects } from "@/lib/projects";
+import { getFeaturedProjects } from "@/lib/projects";
 
 type CaseStudiesSectionProps = {
   title?: string;
@@ -12,11 +13,11 @@ type CaseStudiesSectionProps = {
 
 export function CaseStudiesSection({
   title = "Representative case studies",
-  description = "Sample project profiles demonstrating FTBS approach to construction and technology delivery.",
+  description = "In-depth sample case studies with challenge, solution, results, and lessons learned.",
   limit = 3,
   alt = false,
 }: CaseStudiesSectionProps) {
-  const featured = projects.slice(0, limit);
+  const featured = getFeaturedProjects().slice(0, limit);
 
   return (
     <section
@@ -40,16 +41,22 @@ export function CaseStudiesSection({
 
         <ul className="mt-10 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
           {featured.map((project) => (
-            <li key={project.slug}>
+            <li key={project.id}>
               <ProjectCard project={project} />
             </li>
           ))}
         </ul>
 
-        <div className="mt-10">
+        <div className="mt-10 flex flex-wrap gap-4">
           <Button href={routes.projects.path} variant="outline">
             View Full Portfolio
           </Button>
+          <Link
+            href={routes.caseStudies.path}
+            className="inline-flex min-h-11 items-center text-sm font-semibold text-brand-blue hover:text-brand-navy"
+          >
+            Read case studies →
+          </Link>
         </div>
       </div>
     </section>

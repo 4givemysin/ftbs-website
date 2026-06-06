@@ -1,5 +1,6 @@
 import { company } from "../company";
 import { bgwDivision } from "../divisions";
+import { paulGibbs } from "../leadership";
 
 export const aboutContent = {
   banner: {
@@ -17,19 +18,18 @@ export const aboutContent = {
   bgw: {
     title: bgwDivision.name,
     focus: bgwDivision.focus,
-    paragraph:
-      "BGW reflects FTBS commitment to infrastructure that opens doors for local communities and supports national development over the long term.",
+    paragraph: `${bgwDivision.name} is led by ${paulGibbs.fullTitle} with a commitment to infrastructure development, community growth, and returning home to contribute to the nation's progress.`,
   },
   missionItems: [
     {
       title: "Mission",
       content:
-        "Deliver construction and technology solutions with discipline, transparency, and a commitment to outcomes that serve clients and communities.",
+        "Deliver construction and technology solutions with discipline, transparency, and a commitment to outcomes that serve clients, communities, and long-term infrastructure development.",
     },
     {
       title: "Vision",
       content:
-        "Be a trusted partner for organizations building infrastructure, facilities, and systems that create lasting value.",
+        "Be a trusted partner for organizations building infrastructure, facilities, and systems that create lasting value for communities and future generations.",
     },
     {
       title: "Values",
@@ -38,14 +38,10 @@ export const aboutContent = {
     },
   ],
   leadership: {
-    eyebrow: "Leadership Commitment",
-    title: "Experience in construction and business leadership",
+    eyebrow: "Leadership",
+    title: `${paulGibbs.name}, ${paulGibbs.fullTitle}`,
     description:
-      "FTBS leadership brings together construction delivery experience and business leadership to help partners execute with confidence.",
-    paragraphs: [
-      "BGW Construction Company is led with a clear purpose: to contribute to the rebuilding and long-term development of essential infrastructure — including roads, buildings, housing, and other systems communities depend on.",
-      "That purpose shapes how FTBS approaches partnerships, project selection, and delivery. We look for opportunities to support progress that matters beyond the immediate contract.",
-    ],
+      "Construction industry leadership, project management, and hands-on building experience — dedicated to quality infrastructure and community development.",
   },
   cta: {
     title: "Learn how FTBS can support your organization",

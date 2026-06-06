@@ -5,12 +5,12 @@ export const testimonialsPageContent = {
     eyebrow: "Client Perspectives",
     title: "Testimonials",
     description:
-      "What partners say about working with FTBS. All quotes below are sample content for layout purposes until client-approved testimonials are published.",
+      "Client feedback and success stories across government, construction, institutional, and technology engagements. All content is sample/demo until real testimonials are approved.",
   },
   intro: {
     title: "Trusted by organizations that expect accountability",
     description:
-      "FTBS supports government agencies, developers, and institutional clients who require professional communication, disciplined delivery, and clear reporting.",
+      "FTBS supports partners who require professional communication, disciplined delivery, and clear reporting across complex programs.",
   },
   cta: {
     title: "Become a reference partner",
@@ -18,7 +18,7 @@ export const testimonialsPageContent = {
       "If you have worked with FTBS and would like to share feedback, contact our team to discuss approved testimonial publication.",
     primaryLabel: "Contact FTBS",
     primaryHref: routes.contact.path,
-    secondaryLabel: "View Projects",
-    secondaryHref: routes.projects.path,
+    secondaryLabel: "View Case Studies",
+    secondaryHref: routes.caseStudies.path,
   },
 } as const;

@@ -1,10 +1,11 @@
 import { InteriorPageTemplate } from "@/components/templates/InteriorPageTemplate";
 import { ContentSection } from "@/components/sections/ContentSection";
-import { AboutSubNav } from "@/components/layout/AboutSubNav";
+import { CredibilitySubNav } from "@/components/layout/CredibilitySubNav";
 import { SampleContentNotice } from "@/components/marketing/SampleContentNotice";
 import { CertificationGrid } from "@/components/marketing/CertificationGrid";
+import { WebPageJsonLd } from "@/components/seo/JsonLd";
 import { createMetadataFromPageConfig } from "@/lib/seo";
-import { getPageSeo } from "@/lib/pages";
+import { getPagePath, getPageSeo } from "@/lib/pages";
 import { certificationsPageContent } from "@/lib/content/certifications-page";
 
 export const metadata = createMetadataFromPageConfig(getPageSeo("certifications"));
@@ -14,18 +15,13 @@ export default function CertificationsPage() {
 
   return (
     <>
-      <AboutSubNav />
-      <InteriorPageTemplate
-        banner={banner}
-        cta={{
-          title: cta.title,
-          description: cta.description,
-          primaryLabel: cta.primaryLabel,
-          primaryHref: cta.primaryHref,
-          secondaryLabel: cta.secondaryLabel,
-          secondaryHref: cta.secondaryHref,
-        }}
-      >
+      <WebPageJsonLd
+        title="Certifications"
+        description={banner.description}
+        path={getPagePath("certifications")}
+      />
+      <CredibilitySubNav />
+      <InteriorPageTemplate banner={banner} cta={cta}>
         <ContentSection title="Review notice" alt={false}>
           <SampleContentNotice />
         </ContentSection>

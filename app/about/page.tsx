@@ -1,11 +1,12 @@
 import { InteriorPageTemplate } from "@/components/templates/InteriorPageTemplate";
 import { ContentSection } from "@/components/sections/ContentSection";
-import { AboutSubNav } from "@/components/layout/AboutSubNav";
 import { TestimonialsSection } from "@/components/marketing/TestimonialsSection";
+import { PresidentLetter } from "@/components/marketing/PresidentLetter";
 import { Card } from "@/components/ui/Card";
 import { Button } from "@/components/ui/Button";
 import { createMetadataFromPageConfig } from "@/lib/seo";
 import { getPageSeo } from "@/lib/pages";
+import { WebPageJsonLd } from "@/components/seo/JsonLd";
 import { routes } from "@/lib/routes";
 import { aboutContent } from "@/lib/content/about";
 
@@ -16,7 +17,11 @@ export default function AboutPage() {
 
   return (
     <>
-      <AboutSubNav />
+      <WebPageJsonLd
+        title="About FTBS"
+        description={banner.description}
+        path="/about"
+      />
       <InteriorPageTemplate banner={banner} cta={cta}>
       <ContentSection title={whoWeAre.title} alt={false}>
         <div className="mt-0 grid gap-10 lg:grid-cols-2 lg:items-start">
@@ -68,6 +73,12 @@ export default function AboutPage() {
           <Button href={routes.capabilities.path} variant="outline">
             Capability Statement
           </Button>
+          <Button href={routes.projects.path} variant="outline">
+            Projects Portfolio
+          </Button>
+          <Button href={routes.caseStudies.path} variant="outline">
+            Case Studies
+          </Button>
           <Button href={routes.certifications.path} variant="outline">
             Certifications
           </Button>
@@ -85,16 +96,7 @@ export default function AboutPage() {
         description={leadership.description}
         alt
       >
-        <Card className="mt-0 lg:p-8">
-          {leadership.paragraphs.map((paragraph) => (
-            <p
-              key={paragraph.slice(0, 24)}
-              className="mt-4 first:mt-0 text-base leading-relaxed text-zinc-700"
-            >
-              {paragraph}
-            </p>
-          ))}
-        </Card>
+        <PresidentLetter fullLetter />
       </ContentSection>
     </InteriorPageTemplate>
     </>

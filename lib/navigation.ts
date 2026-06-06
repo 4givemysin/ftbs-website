@@ -10,6 +10,7 @@ export const mainNavLinks: NavLink[] = [
   { label: routes.about.label, href: routes.about.path },
   { label: routes.services.label, href: routes.services.path },
   { label: routes.projects.label, href: routes.projects.path },
+  { label: routes.caseStudies.label, href: routes.caseStudies.path },
   { label: routes.contact.label, href: routes.contact.path },
 ];
 
@@ -17,10 +18,11 @@ export const footerNav = {
   company: [
     { label: "About FTBS", href: routes.about.path },
     { label: routes.capabilities.label, href: routes.capabilities.path },
+    { label: routes.companyProfile.label, href: routes.companyProfile.path },
     { label: routes.projects.label, href: routes.projects.path },
+    { label: routes.caseStudies.label, href: routes.caseStudies.path },
     { label: routes.testimonials.label, href: routes.testimonials.path },
     { label: routes.certifications.label, href: routes.certifications.path },
-    { label: routes.companyProfile.label, href: routes.companyProfile.path },
     { label: "Our Services", href: routes.services.path },
     { label: "Contact", href: routes.contact.path },
   ],
@@ -40,7 +42,6 @@ export const footerNav = {
       href: `${routes.services.path}#digital-project-systems`,
     },
   ],
-  /** Reserved for Phase 3+ — enable when routes.active === true */
   future: [
     { label: routes.bgwConstruction.label, href: routes.bgwConstruction.path, phase: 3 },
     { label: routes.government.label, href: routes.government.path, phase: 6 },
@@ -52,10 +53,10 @@ export const primaryCta = {
   href: routes.contact.path,
 } as const;
 
-/** About section sub-navigation for credibility pages */
-export const aboutSubNav: NavLink[] = [
-  { label: "About FTBS", href: routes.about.path },
+/** Credibility pages sub-navigation */
+export const credibilityNav: NavLink[] = [
   { label: routes.capabilities.label, href: routes.capabilities.path },
-  { label: routes.certifications.label, href: routes.certifications.path },
   { label: routes.companyProfile.label, href: routes.companyProfile.path },
+  { label: routes.certifications.label, href: routes.certifications.path },
+  { label: routes.caseStudies.label, href: routes.caseStudies.path },
 ];

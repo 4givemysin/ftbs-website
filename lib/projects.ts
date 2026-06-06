@@ -1,177 +1,202 @@
-export type ProjectCategory =
-  | "infrastructure"
-  | "commercial"
-  | "residential"
-  | "project-management"
-  | "technology";
+export type PortfolioTrack = "construction" | "technology" | "business-consulting";
 
 export type ClientType = "government" | "developer" | "institution" | "private";
 
-export type ProjectCaseStudy = {
-  slug: string;
+export type PortfolioProject = {
+  id: string;
   title: string;
   summary: string;
-  category: ProjectCategory;
+  track: PortfolioTrack;
+  featured: boolean;
   clientType: ClientType;
   location: string;
   year: string;
   services: string[];
+  impact: string;
+  results: string[];
   /** Sample content flag — replace with approved project data */
   isSample: true;
-  challenge: string;
-  approach: string;
-  outcome: string;
-  timeline: string;
-  metrics: { label: string; value: string }[];
 };
 
-export const projectCategories: {
-  id: ProjectCategory;
-  label: string;
-}[] = [
-  { id: "infrastructure", label: "Infrastructure" },
-  { id: "commercial", label: "Commercial" },
-  { id: "residential", label: "Residential" },
-  { id: "project-management", label: "Project Management" },
-  { id: "technology", label: "Technology" },
+export const portfolioTracks: { id: PortfolioTrack; label: string }[] = [
+  { id: "construction", label: "Construction Projects" },
+  { id: "technology", label: "Technology Projects" },
+  { id: "business-consulting", label: "Business Consulting Projects" },
 ];
 
-export const projects: ProjectCaseStudy[] = [
+export const portfolioProjects: PortfolioProject[] = [
   {
-    slug: "regional-transportation-corridor",
-    title: "Regional Transportation Corridor Improvements",
+    id: "featured-corridor",
+    title: "Regional Transportation Corridor Program",
     summary:
-      "Sample case study: multi-phase roadway rehabilitation and safety upgrades supporting regional connectivity and public access.",
-    category: "infrastructure",
+      "Sample featured project: phased roadway rehabilitation and safety upgrades for a public agency partner.",
+    track: "construction",
+    featured: true,
     clientType: "government",
     location: "Southeastern United States",
     year: "2024",
     services: ["Infrastructure Development", "Construction Project Management"],
-    isSample: true,
-    challenge:
-      "A municipal partner needed to modernize aging corridor infrastructure while maintaining traffic flow and meeting federal reporting requirements.",
-    approach:
-      "FTBS established phased construction sequencing, stakeholder communication protocols, and milestone-based reporting aligned with agency standards.",
-    outcome:
-      "The sample project demonstrates on-schedule phase delivery, improved safety features, and documentation suitable for public-sector audit review.",
-    timeline: "14 months (sample)",
-    metrics: [
-      { label: "Project value (sample)", value: "$4.2M" },
-      { label: "Phases delivered", value: "3" },
-      { label: "Reporting cadence", value: "Weekly" },
+    impact:
+      "Sample impact: improved corridor safety features and structured reporting for agency oversight.",
+    results: [
+      "Three delivery phases completed on sample schedule",
+      "Weekly stakeholder reporting maintained throughout",
+      "Documented compliance checkpoints for public review",
     ],
+    isSample: true,
   },
   {
-    slug: "institutional-facility-renovation",
-    title: "Institutional Facility Renovation Program",
+    id: "featured-capital-program",
+    title: "Multi-Site Capital Improvement Oversight",
     summary:
-      "Sample case study: facility upgrades for an institutional client requiring minimal operational disruption and strict compliance oversight.",
-    category: "commercial",
+      "Sample featured project: owner-side program management with executive reporting across multiple facilities.",
+    track: "business-consulting",
+    featured: true,
     clientType: "institution",
-    location: "Georgia",
-    year: "2023",
-    services: ["Commercial Construction", "Construction Project Management"],
-    isSample: true,
-    challenge:
-      "Renovation work had to proceed in occupied facilities with limited downtime windows and coordinated subcontractor access.",
-    approach:
-      "FTBS implemented zone-based scheduling, quality checkpoints, and a single point of accountability for owner communications.",
-    outcome:
-      "Sample outcomes include completed core upgrades within the planned window and documented compliance with institutional safety requirements.",
-    timeline: "9 months (sample)",
-    metrics: [
-      { label: "Square footage (sample)", value: "45,000 SF" },
-      { label: "Change orders managed", value: "12" },
-      { label: "Safety incidents", value: "0" },
-    ],
-  },
-  {
-    slug: "community-housing-development",
-    title: "Community Housing Development Support",
-    summary:
-      "Sample case study: project management support for a residential development focused on durable housing and community access.",
-    category: "residential",
-    clientType: "developer",
-    location: "Georgia",
-    year: "2024",
-    services: ["Infrastructure Development", "Construction Project Management"],
-    isSample: true,
-    challenge:
-      "A development partner required disciplined schedule control across civil, vertical construction, and utility coordination workstreams.",
-    approach:
-      "FTBS aligned milestone planning with lender draw schedules and established clear reporting for investor and community stakeholders.",
-    outcome:
-      "This sample profile illustrates structured delivery tracking, budget visibility, and readiness for long-term community occupancy.",
-    timeline: "18 months (sample)",
-    metrics: [
-      { label: "Units (sample)", value: "48" },
-      { label: "Milestones tracked", value: "24" },
-      { label: "Budget variance (sample)", value: "< 2%" },
-    ],
-  },
-  {
-    slug: "capital-program-oversight",
-    title: "Capital Program Oversight & Reporting",
-    summary:
-      "Sample case study: owner-side project management for a multi-site capital improvement program with executive reporting needs.",
-    category: "project-management",
-    clientType: "government",
     location: "Multi-site",
     year: "2023",
     services: ["Construction Project Management", "Technology & Business Consulting"],
-    isSample: true,
-    challenge:
-      "Program leadership needed consolidated visibility across vendors, schedules, and budget performance for board-level reporting.",
-    approach:
-      "FTBS deployed standardized reporting templates, risk logs, and executive dashboards with defined escalation paths.",
-    outcome:
-      "Sample results show improved decision speed, consistent reporting formats, and clearer accountability across work packages.",
-    timeline: "12 months (sample)",
-    metrics: [
-      { label: "Sites overseen (sample)", value: "6" },
-      { label: "Executive reports", value: "Monthly" },
-      { label: "Open risks at closeout", value: "0 critical" },
+    impact:
+      "Sample impact: consolidated visibility for leadership and faster decision-making across vendors.",
+    results: [
+      "Standardized reporting across six sample sites",
+      "Monthly executive summaries delivered on schedule",
+      "Risk log maintained with zero critical open items at closeout",
     ],
+    isSample: true,
   },
   {
-    slug: "construction-operations-systems",
+    id: "tech-operations-assessment",
     title: "Construction Operations Systems Assessment",
     summary:
-      "Sample case study: technology consulting engagement to evaluate field reporting, document control, and project visibility tools.",
-    category: "technology",
+      "Sample technology project: evaluation of field reporting, document control, and project visibility platforms.",
+    track: "technology",
+    featured: false,
     clientType: "private",
     location: "Remote / On-site",
     year: "2024",
     services: ["Technology & Business Consulting", "Digital Project Systems"],
-    isSample: true,
-    challenge:
-      "A growing construction organization needed clearer systems for field updates, RFIs, and executive visibility without disrupting active jobs.",
-    approach:
-      "FTBS mapped current workflows, evaluated platform options, and defined a phased implementation roadmap with training requirements.",
-    outcome:
-      "Sample deliverables include a systems recommendation summary, implementation phases, and KPIs for adoption measurement.",
-    timeline: "10 weeks (sample)",
-    metrics: [
-      { label: "Workflows mapped", value: "14" },
-      { label: "Platform options evaluated", value: "5" },
-      { label: "Implementation phases", value: "3" },
+    impact:
+      "Sample impact: practical roadmap for systems adoption aligned with active job sites.",
+    results: [
+      "14 workflows mapped across operations",
+      "Five platform options evaluated",
+      "Three-phase implementation plan delivered",
     ],
+    isSample: true,
+  },
+  {
+    id: "tech-dashboard-rollout",
+    title: "Executive Project Visibility Dashboard",
+    summary:
+      "Sample technology project: dashboard design for schedule, budget, and milestone tracking.",
+    track: "technology",
+    featured: false,
+    clientType: "developer",
+    location: "Georgia",
+    year: "2023",
+    services: ["Digital Project Systems", "Technology & Business Consulting"],
+    impact:
+      "Sample impact: leadership gained a single view of program health without disrupting field teams.",
+    results: [
+      "KPI definitions agreed with executive sponsors",
+      "Pilot dashboard deployed for sample program",
+      "Adoption checklist created for field rollout",
+    ],
+    isSample: true,
+  },
+  {
+    id: "consulting-vendor-selection",
+    title: "Vendor Selection & Contract Readiness Review",
+    summary:
+      "Sample consulting engagement: structured evaluation of subcontractors and procurement documentation.",
+    track: "business-consulting",
+    featured: false,
+    clientType: "government",
+    location: "Georgia",
+    year: "2024",
+    services: ["Technology & Business Consulting", "Construction Project Management"],
+    impact:
+      "Sample impact: clearer vendor accountability and procurement-ready documentation packages.",
+    results: [
+      "Evaluation matrix applied to eight sample vendors",
+      "Procurement checklist aligned to agency standards",
+      "Recommendation summary delivered for leadership review",
+    ],
+    isSample: true,
+  },
+  {
+    id: "consulting-program-governance",
+    title: "Program Governance Framework Design",
+    summary:
+      "Sample consulting project: governance model for a multi-year infrastructure capital program.",
+    track: "business-consulting",
+    featured: false,
+    clientType: "institution",
+    location: "Georgia",
+    year: "2023",
+    services: ["Technology & Business Consulting"],
+    impact:
+      "Sample impact: defined roles, escalation paths, and reporting cadence for complex programs.",
+    results: [
+      "Governance charter drafted for sample program",
+      "RACI matrix completed for key workstreams",
+      "Quarterly review cycle established",
+    ],
+    isSample: true,
+  },
+  {
+    id: "construction-facility-renovation",
+    title: "Institutional Facility Renovation",
+    summary:
+      "Sample construction project: occupied-facility upgrades with phased access and compliance oversight.",
+    track: "construction",
+    featured: false,
+    clientType: "institution",
+    location: "Georgia",
+    year: "2023",
+    services: ["Commercial Construction", "Construction Project Management"],
+    impact:
+      "Sample impact: core facility upgrades completed within planned operational windows.",
+    results: [
+      "45,000 SF sample scope managed in zones",
+      "Zero recordable safety incidents in sample reporting",
+      "Institutional compliance documentation maintained",
+    ],
+    isSample: true,
+  },
+  {
+    id: "construction-housing-development",
+    title: "Community Housing Development Support",
+    summary:
+      "Sample construction project: schedule and budget oversight for a residential development program.",
+    track: "construction",
+    featured: false,
+    clientType: "developer",
+    location: "Georgia",
+    year: "2024",
+    services: ["Infrastructure Development", "Construction Project Management"],
+    impact:
+      "Sample impact: improved milestone tracking across civil, vertical, and utility workstreams.",
+    results: [
+      "48 sample units tracked through defined milestones",
+      "Budget variance held under 2% in sample reporting",
+      "Lender draw schedule alignment maintained",
+    ],
+    isSample: true,
   },
 ];
 
-export function getProjectBySlug(slug: string): ProjectCaseStudy | undefined {
-  return projects.find((project) => project.slug === slug);
+export function getFeaturedProjects(): PortfolioProject[] {
+  return portfolioProjects.filter((project) => project.featured);
 }
 
-export function getProjectsByCategory(
-  category: ProjectCategory | "all",
-): ProjectCaseStudy[] {
-  if (category === "all") return projects;
-  return projects.filter((project) => project.category === category);
+export function getProjectsByTrack(track: PortfolioTrack): PortfolioProject[] {
+  return portfolioProjects.filter((project) => project.track === track);
 }
 
-export function getCategoryLabel(category: ProjectCategory): string {
-  return projectCategories.find((item) => item.id === category)?.label ?? category;
+export function getTrackLabel(track: PortfolioTrack): string {
+  return portfolioTracks.find((item) => item.id === track)?.label ?? track;
 }
 
 export function getClientTypeLabel(clientType: ClientType): string {
@@ -183,3 +208,23 @@ export function getClientTypeLabel(clientType: ClientType): string {
   };
   return labels[clientType];
 }
+
+/** Aggregate impact metrics for portfolio results section */
+export const portfolioImpactSummary = [
+  {
+    label: "Sample programs supported",
+    value: "8+",
+  },
+  {
+    label: "Client types served",
+    value: "4",
+  },
+  {
+    label: "Service tracks",
+    value: "3",
+  },
+  {
+    label: "Reporting standard",
+    value: "Executive-ready",
+  },
+] as const;

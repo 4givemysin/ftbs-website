@@ -2,15 +2,15 @@ import { routes } from "../routes";
 
 export const certificationsPageContent = {
   banner: {
-    eyebrow: "Credentials",
-    title: "Certifications & Registrations",
+    eyebrow: "Credentials & Compliance",
+    title: "Certifications",
     description:
-      "Licenses, insurance, and professional registrations that support FTBS work with public and private partners. Sample entries are placeholders pending verification.",
+      "Current credentials, future certification goals, compliance standards, and industry practices. FTBS does not claim unearned certifications.",
   },
   intro: {
-    title: "Verifiable credentials only",
+    title: "Honest, verifiable credentials",
     description:
-      "FTBS publishes certifications and registrations only after official confirmation. Items marked as sample or pending will be updated as documentation is verified.",
+      "Only verified licenses, registrations, and certifications will be published. Placeholder sections indicate where documentation will appear once confirmed.",
   },
   cta: {
     title: "Request credential documentation",

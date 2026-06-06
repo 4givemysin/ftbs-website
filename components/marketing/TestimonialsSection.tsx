@@ -20,9 +20,9 @@ type TestimonialsSectionProps = {
 export function TestimonialsSection({
   eyebrow = "Client Perspectives",
   title = "What partners expect from professional delivery",
-  description = "Representative feedback illustrating the communication, accountability, and reporting standards FTBS brings to construction and technology engagements.",
+  description = "Representative sample feedback illustrating the communication, accountability, and reporting standards FTBS brings to construction and technology engagements.",
   limit = 3,
-  testimonials = getFeaturedTestimonials(limit),
+  testimonials = getFeaturedTestimonials().slice(0, limit),
   alt = false,
   showViewAll = true,
 }: TestimonialsSectionProps) {
@@ -55,9 +55,10 @@ export function TestimonialsSection({
           {testimonials.map((item) => (
             <li key={item.id}>
               <Card className="flex h-full flex-col">
-                <Badge variant="default" className="self-start">
-                  Sample
-                </Badge>
+                <div className="flex flex-wrap gap-2">
+                  <Badge variant="default">Sample</Badge>
+                  <Badge variant="technology">{item.industry}</Badge>
+                </div>
                 <blockquote className="mt-4 flex-1 text-sm leading-relaxed text-zinc-700">
                   &ldquo;{item.quote}&rdquo;
                 </blockquote>

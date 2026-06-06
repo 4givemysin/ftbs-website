@@ -1,12 +1,36 @@
+export type TestimonialIndustry =
+  | "government"
+  | "construction"
+  | "institutional"
+  | "technology";
+
 export type Testimonial = {
   id: string;
   quote: string;
   name: string;
   title: string;
   organization: string;
+  industry: TestimonialIndustry;
+  featured: boolean;
   /** Sample content flag — replace with client-approved quotes */
   isSample: true;
 };
+
+export type SuccessStory = {
+  id: string;
+  title: string;
+  summary: string;
+  industry: TestimonialIndustry;
+  /** Sample content flag */
+  isSample: true;
+};
+
+export const testimonialIndustries: { id: TestimonialIndustry; label: string }[] = [
+  { id: "government", label: "Government & Public Sector" },
+  { id: "construction", label: "Construction & Development" },
+  { id: "institutional", label: "Institutional" },
+  { id: "technology", label: "Technology & Operations" },
+];
 
 export const testimonials: Testimonial[] = [
   {
@@ -16,6 +40,8 @@ export const testimonials: Testimonial[] = [
     name: "Program Director",
     title: "Capital Projects Office",
     organization: "Sample Municipal Agency",
+    industry: "government",
+    featured: true,
     isSample: true,
   },
   {
@@ -25,6 +51,8 @@ export const testimonials: Testimonial[] = [
     name: "Development Manager",
     title: "Project Development",
     organization: "Sample Regional Developer",
+    industry: "construction",
+    featured: true,
     isSample: true,
   },
   {
@@ -34,6 +62,8 @@ export const testimonials: Testimonial[] = [
     name: "Facilities Director",
     title: "Operations & Facilities",
     organization: "Sample Institutional Client",
+    industry: "institutional",
+    featured: true,
     isSample: true,
   },
   {
@@ -43,10 +73,73 @@ export const testimonials: Testimonial[] = [
     name: "Operations Lead",
     title: "Construction Operations",
     organization: "Sample Construction Firm",
+    industry: "technology",
+    featured: false,
+    isSample: true,
+  },
+  {
+    id: "sample-government-reporting",
+    quote:
+      "Sample testimonial: Weekly reporting cadence and risk documentation gave our leadership team confidence during a high-visibility public works phase.",
+    name: "Deputy Director",
+    title: "Public Works",
+    organization: "Sample County Agency",
+    industry: "government",
+    featured: false,
+    isSample: true,
+  },
+  {
+    id: "sample-construction-schedule",
+    quote:
+      "Sample testimonial: FTBS maintained schedule accountability across subcontractors and kept our investor updates aligned with field progress.",
+    name: "Project Executive",
+    title: "Development",
+    organization: "Sample Housing Developer",
+    industry: "construction",
+    featured: false,
     isSample: true,
   },
 ];
 
-export function getFeaturedTestimonials(limit = 3): Testimonial[] {
-  return testimonials.slice(0, limit);
+export const successStories: SuccessStory[] = [
+  {
+    id: "story-public-reporting",
+    title: "Restored reporting confidence for a public program",
+    summary:
+      "Sample success story: standardized executive reporting and risk tracking for a multi-phase infrastructure engagement.",
+    industry: "government",
+    isSample: true,
+  },
+  {
+    id: "story-occupied-renovation",
+    title: "Delivered occupied-facility upgrades on schedule",
+    summary:
+      "Sample success story: zone-based sequencing kept institutional operations running during renovation work.",
+    industry: "institutional",
+    isSample: true,
+  },
+  {
+    id: "story-systems-roadmap",
+    title: "Created a practical technology adoption roadmap",
+    summary:
+      "Sample success story: field-informed systems evaluation and phased rollout planning for a construction operator.",
+    industry: "technology",
+    isSample: true,
+  },
+];
+
+export function getFeaturedTestimonials(): Testimonial[] {
+  return testimonials.filter((item) => item.featured);
+}
+
+export function getTestimonialsByIndustry(
+  industry: TestimonialIndustry,
+): Testimonial[] {
+  return testimonials.filter((item) => item.industry === industry);
+}
+
+export function getIndustryLabel(industry: TestimonialIndustry): string {
+  return (
+    testimonialIndustries.find((item) => item.id === industry)?.label ?? industry
+  );
 }

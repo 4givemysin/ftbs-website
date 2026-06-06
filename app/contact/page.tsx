@@ -7,6 +7,7 @@ import { createMetadataFromPageConfig } from "@/lib/seo";
 import { getPageSeo } from "@/lib/pages";
 import { contactContent } from "@/lib/content/contact";
 import { company, formattedAddress } from "@/lib/company";
+import { paulGibbs } from "@/lib/leadership";
 
 export const metadata = createMetadataFromPageConfig(getPageSeo("contact"));
 
@@ -56,6 +57,17 @@ export default function ContactPage() {
                 </h2>
                 <dl className="mt-4 space-y-4 text-sm">
                   <div>
+                    <dt className="font-medium text-brand-navy">Phone</dt>
+                    <dd className="mt-1">
+                      <a
+                        href={`tel:${company.phone.replace(/\D/g, "")}`}
+                        className="text-brand-blue hover:text-brand-navy"
+                      >
+                        {company.phone}
+                      </a>
+                    </dd>
+                  </div>
+                  <div>
                     <dt className="font-medium text-brand-navy">Email</dt>
                     <dd className="mt-1">
                       <a
@@ -63,6 +75,19 @@ export default function ContactPage() {
                         className="text-brand-blue hover:text-brand-navy"
                       >
                         {company.email}
+                      </a>
+                    </dd>
+                  </div>
+                  <div>
+                    <dt className="font-medium text-brand-navy">Leadership</dt>
+                    <dd className="mt-1 leading-relaxed text-zinc-600">
+                      {paulGibbs.name}, {paulGibbs.fullTitle}
+                      <br />
+                      <a
+                        href={`mailto:${paulGibbs.email}`}
+                        className="text-brand-blue hover:text-brand-navy"
+                      >
+                        {paulGibbs.email}
                       </a>
                     </dd>
                   </div>

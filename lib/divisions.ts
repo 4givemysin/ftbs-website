@@ -1,4 +1,5 @@
 import { company } from "./company";
+import { presidentMissionExcerpt } from "./leadership";
 
 /**
  * BGW Construction Company division metadata.
@@ -16,8 +17,7 @@ export const bgwDivision = {
     "Housing and residential development",
     "Essential public works",
   ],
-  missionExcerpt:
-    "This is not simply a business matter — it is about returning home, giving back, and helping build something meaningful for future generations, not just for the moment.",
+  missionExcerpt: presidentMissionExcerpt,
   partners: [
     "Government agencies",
     "Developers and institutions",

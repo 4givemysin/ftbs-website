@@ -37,31 +37,37 @@ export const pageSeo: Record<string, PageSeoConfig> = {
     routeKey: "capabilities",
     title: "Capability Statement",
     description:
-      "FTBS capability statement — core competencies in construction project management, infrastructure development, and technology consulting for government and institutional partners.",
+      "FTBS capability statement with core competencies, differentiators, service areas, and government and commercial readiness for procurement partners.",
   },
   projects: {
     routeKey: "projects",
     title: "Projects Portfolio",
     description:
-      "Explore FTBS past performance in infrastructure, commercial construction, project management, and technology consulting. Sample project profiles available.",
+      "FTBS projects portfolio featuring construction, technology, and business consulting engagements with results and impact summaries.",
+  },
+  caseStudies: {
+    routeKey: "caseStudies",
+    title: "Case Studies",
+    description:
+      "FTBS case studies detailing business challenges, solutions, results, and lessons learned from construction and technology programs.",
   },
   testimonials: {
     routeKey: "testimonials",
     title: "Testimonials",
     description:
-      "Client perspectives on FTBS construction project management, infrastructure delivery, and technology consulting services.",
+      "Client testimonials and success stories on FTBS construction project management, infrastructure delivery, and technology consulting.",
   },
   certifications: {
     routeKey: "certifications",
-    title: "Certifications & Registrations",
+    title: "Certifications & Compliance",
     description:
-      "FTBS licenses, certifications, insurance, and professional registrations supporting construction and technology services.",
+      "FTBS certifications, compliance standards, industry practices, and future certification goals. Verified credentials published only when confirmed.",
   },
   companyProfile: {
     routeKey: "companyProfile",
-    title: "Company Profile Download",
+    title: "Company Profile",
     description:
-      "Download or request FTBS company profile, capability statement, and procurement documentation for vendor review.",
+      "FTBS company profile with executive overview, history, services, growth vision, and download request for procurement partners.",
   },
 };
 
@@ -80,19 +86,17 @@ export const siteDefaults = {
   locale: "en_US",
 } as const;
 
-/** SEO config for dynamic project case study pages */
-export function getProjectCaseStudySeo(project: {
+export function getCaseStudySeo(study: {
   title: string;
   summary: string;
-  slug: string;
 }): PageSeoConfig {
   return {
-    routeKey: "projects",
-    title: project.title,
-    description: project.summary,
+    routeKey: "caseStudies",
+    title: study.title,
+    description: study.summary,
   };
 }
 
-export function getProjectCaseStudyPath(slug: string): string {
-  return `${routes.projects.path}/${slug}`;
+export function getCaseStudyPath(slug: string): string {
+  return `${routes.caseStudies.path}/${slug}`;
 }

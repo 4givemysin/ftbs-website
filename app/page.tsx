@@ -67,9 +67,15 @@ export default function HomePage() {
         <blockquote className="rounded-lg border-l-4 border-brand-gold bg-surface-alt p-6 text-base leading-relaxed text-zinc-700">
           {bgw.quote}
         </blockquote>
-        <div className="mt-8">
+        <p className="mt-4 text-sm font-semibold text-brand-navy">
+          — Paul Gibbs, President, BGW Construction Company
+        </p>
+        <div className="mt-8 flex flex-wrap gap-3">
           <Button href={routes.capabilities.path} variant="outline">
             View Capability Statement
+          </Button>
+          <Button href={routes.projects.path} variant="outline">
+            View Projects
           </Button>
         </div>
       </ContentSection>
