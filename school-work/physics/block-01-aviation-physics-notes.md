@@ -498,4 +498,99 @@ Calculator: `output ÷ input × 100 =`
 If **temp ↑** (same pressure) → volume ↑ → density ↓  
 Hot air = less dense → worse engine/wing/prop performance
 
-_Last updated: 2026-07-22 — added extra notebook must-writes (absolute temp, std atm, hydraulics, controls, axes)_
+## Always-the-same conversions & constants
+
+These numbers **do not change**. Memorize them — every problem uses the same values.
+
+### Temperature (always)
+| Convert | Always do this | Calculator |
+|---------|----------------|------------|
+| °C → °F | × **1.8**, then + **32** | `C × 1.8 + 32 =` |
+| °F → °C | − **32**, then ÷ **1.8** | `( F − 32 ) ÷ 1.8 =` |
+| °C → Kelvin | + **273** | `C + 273 =` |
+| °F → Rankine | + **460** | `F + 460 =` |
+
+**Memory anchors (same every time)**
+- Water freezes: **0 °C** = **32 °F**
+- Water boils: **100 °C** = **212 °F**
+- Standard day: **15 °C** = **59 °F**
+
+### Standard atmosphere (always at sea level)
+| Thing | Always this value |
+|-------|-------------------|
+| Temperature | **15 °C** / **59 °F** |
+| Pressure | **29.92 inHg** |
+| Pressure | **14.7 psi** |
+| Pressure | **1013.2 mb** (same as hPa) |
+
+**Always add for absolute pressure:**  
+`P_absolute = P_gauge + 14.7` → `gauge + 14.7 =`
+
+### Power / work (always)
+| Constant | Meaning |
+|----------|---------|
+| **1 HP = 550 ft·lb/sec** | Always use **550** in HP formula |
+| Work unit | **ft·lb** (force in lb × distance in ft) |
+
+HP calculator (always same 550):  
+`F × d ÷ 550 ÷ t =`
+
+### Gravity / mass–weight (always on Earth, AMT style)
+| Constant | Value |
+|----------|-------|
+| Gravity (g) | **32.2 ft/sec²** |
+| 1 slug | **32.2 lb** of weight (under standard g) |
+
+Weight ↔ mass idea: Weight = mass × g  
+Calculator: `mass × 32.2 =` (weight)
+
+### Pressure unit family (same pressure, different labels)
+| Same sea-level atmosphere ≈ |
+|------------------------------|
+| **14.7 psi** |
+| **29.92 inHg** |
+| **1013.2 mb** |
+
+### Length (always)
+| Convert | Multiply / divide by |
+|---------|----------------------|
+| ft → in | × **12** |
+| in → ft | ÷ **12** |
+| yd → ft | × **3** |
+
+Calculator: `ft × 12 =` (inches) · `in ÷ 12 =` (feet)
+
+### Area (always) — needed for pressure problems
+| Convert | Rule |
+|---------|------|
+| in² from inches | length × width (both in inches) |
+| ft² → in² | × **144** (because 12 × 12) |
+| in² → ft² | ÷ **144** |
+
+Calculator: `ft2 × 144 =` · `in2 ÷ 144 =`
+
+### Circle / piston area (always)
+| Formula | Labels | Calculator |
+|---------|--------|------------|
+| Area = π r² | **radius** | `3.1416 × r × r =` |
+| Or diameter form | A = π (d÷2)² | `3.1416 × ( d ÷ 2 ) × ( d ÷ 2 ) =` |
+
+Use **π ≈ 3.1416** (or your calc `π` button if it has one).
+
+### Common fixed pairs (write once)
+| Always equals |
+|---------------|
+| 1.8 and 32 → temp C↔F |
+| 273 → C to Kelvin |
+| 460 → F to Rankine |
+| 14.7 → psi atmosphere / gauge→absolute |
+| 29.92 → inHg standard |
+| 550 → horsepower denominator |
+| 32.2 → gravity (ft/sec²) |
+| 12 → inches in a foot |
+| 144 → in² in a ft² |
+
+### Mini memory sentence
+**“1.8 & 32 for temp, 273/460 absolute, 14.7 & 29.92 air, 550 for HP, 32.2 for gravity, 12 and 144 for inches.”**
+
+_Last updated: 2026-07-22 — always-the-same conversions & constants_
