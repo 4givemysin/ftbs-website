@@ -1,12 +1,48 @@
 # Block 01 Aviation Physics — Notebook Notes
 
-Source focus: FAA General (Physics for Aviation / ACS AM.I.J) + Block 01 Aviation Physics.
-
 Copy the **cheat rows** and **definitions** into your notebook. Label each part of every formula when you work problems.
+
+## Sources (where this came from)
+
+| Source | What to use |
+|--------|-------------|
+| **FAA-H-8083-30B** *Aviation Maintenance Technician Handbook — General*, **Chapter 5: Physics for Aviation** | Main handbook pages below |
+| **FAA ACS** Aviation Mechanic Certification Standards — **AM.I.J Physics for Aviation** | Test objectives (K1–K13, S1–S8) |
+| Class file: **Block 01 Aviation Physics.pptx** | Match these notes to your instructor slides |
+
+### FAA-H-8083-30B Chapter 5 — page map
+
+| Topic | Handbook page |
+|-------|----------------|
+| Matter / density / specific gravity | **5-1** to **5-2** |
+| Energy (PE / KE) | **5-2** to **5-3** |
+| Force, work, friction | **5-4** to **5-5** |
+| Power & torque | **5-6** |
+| Simple machines / mechanical advantage | **5-7** |
+| Levers | **5-8** to **5-9** |
+| Pulley / gear / inclined plane | **5-9** to **5-11** |
+| Stress & strain | **5-12** to **5-14** |
+| Motion / speed / acceleration | **5-14** to **5-15** |
+| Newton’s laws | **5-16** to **5-17** |
+| Heat / heat transfer / temperature | **5-18** to **5-22** |
+| Pressure (gauge / absolute / differential) | **5-22** to **5-23** |
+| Gas laws (Boyle, Charles, general) | **5-23** to **5-25** |
+| Pascal’s Law | **5-27** |
+| Bernoulli’s Principle | **5-29** |
+| Four forces / theory of flight / airfoils | **5-36** to **5-38** |
+
+> Page numbers are **FAA-H-8083-30B** chapter pages (like `5-16`). If your printout is **8083-30A**, topics match but page numbers can be off by ~1.
+
+### Study images
+
+![Formula cheat sheet](images/block-01-physics-formula-cheatsheet.png)
+
+![Bernoulli, four forces, levers](images/block-01-physics-bernoulli-forces-levers.png)
 
 ---
 
 ## 1) Matter & Density
+**Ref: FAA-H-8083-30B pp. 5-1 to 5-2**
 
 | Word | Meaning |
 |------|---------|
@@ -30,6 +66,7 @@ Copy the **cheat rows** and **definitions** into your notebook. Label each part 
 ---
 
 ## 2) Energy
+**Ref: FAA-H-8083-30B pp. 5-2 to 5-3**
 
 | Type | Meaning | Example |
 |------|---------|---------|
@@ -52,6 +89,7 @@ Energy can change form, but total energy is conserved (minus losses to heat/fric
 ---
 
 ## 3) Force, Work, Power, Torque
+**Ref: FAA-H-8083-30B pp. 5-4 to 5-6**
 
 | Word | Meaning |
 |------|---------|
@@ -81,6 +119,7 @@ Energy can change form, but total energy is conserved (minus losses to heat/fric
 ---
 
 ## 4) Newton’s Laws (write these word-for-word)
+**Ref: FAA-H-8083-30B pp. 5-16 to 5-17**
 
 1. **1st (Inertia):** An object at rest stays at rest; an object in motion stays in motion in a straight line — unless an outside force acts.
 2. **2nd (F = ma):** Force = mass × acceleration. More force → more accel; more mass → less accel for same force.
@@ -95,6 +134,7 @@ Energy can change form, but total energy is conserved (minus losses to heat/fric
 ---
 
 ## 5) Simple Machines & Mechanical Advantage
+**Ref: FAA-H-8083-30B pp. 5-7 to 5-11** (levers **5-8** to **5-9**)
 
 Machines multiply force or change direction. They do **not** create energy.
 
@@ -137,6 +177,7 @@ Drive and driven gears turn **opposite** directions (external mesh).
 ---
 
 ## 6) Stress & Strain
+**Ref: FAA-H-8083-30B pp. 5-12 to 5-14**
 
 | Word | Meaning |
 |------|---------|
@@ -156,6 +197,7 @@ Drive and driven gears turn **opposite** directions (external mesh).
 ---
 
 ## 7) Heat & Temperature
+**Ref: FAA-H-8083-30B pp. 5-18 to 5-22**
 
 | Word | Meaning |
 |------|---------|
@@ -182,6 +224,7 @@ Drive and driven gears turn **opposite** directions (external mesh).
 ---
 
 ## 8) Pressure
+**Ref: FAA-H-8083-30B pp. 5-22 to 5-23**
 
 **Pressure = Force ÷ Area**
 
@@ -203,6 +246,7 @@ Absolute ≈ Gauge + Atmospheric (≈ 14.7 psi at sea level)
 ---
 
 ## 9) Gas Laws
+**Ref: FAA-H-8083-30B pp. 5-23 to 5-25** (Boyle **5-24**, Charles **5-25**)
 
 | Law | Rule (words) | Formula |
 |-----|--------------|---------|
@@ -223,6 +267,7 @@ Always use **absolute temperature** with gas laws.
 ---
 
 ## 10) Fluids — Pascal & Bernoulli
+**Ref: Pascal 5-27 · Bernoulli 5-29** (FAA-H-8083-30B)
 
 **Pascal’s Law:** Pressure applied to a confined fluid is transmitted equally in all directions.  
 Hydraulics: small force on small piston → large force on large piston (same pressure).
@@ -243,6 +288,7 @@ Venturi / wing: faster air over curved upper surface → lower pressure → **li
 ---
 
 ## 11) Atmosphere & Performance (quick)
+**Ref: FAA-H-8083-30B Ch. 5 (atmosphere / performance discussion near theory of flight)** + ACS AM.I.J.S2–S3
 
 Standard day (sea level typical values to know):
 - Pressure ≈ **29.92 inHg** / **14.7 psi**
@@ -258,6 +304,7 @@ Hot + high + humid → higher density altitude → **worse** performance (engine
 ---
 
 ## 12) Theory of Flight (must-know)
+**Ref: FAA-H-8083-30B pp. 5-36 to 5-38**
 
 **Four forces**
 - **Lift** up
