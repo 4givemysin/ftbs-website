@@ -362,4 +362,4 @@ Lift comes from:
 9. Pascal – pressure equal in confined fluid  
 10. Bernoulli – faster flow, lower pressure  
 
-_Last updated: 2026-07-22 — Block 01 Aviation Physics notebook summary_
+_Last updated: 2026-07-22 — Block 01 Aviation Physics notebook summary with FAA-H-8083-30B page refs + study images_
