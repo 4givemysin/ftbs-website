@@ -413,6 +413,71 @@ Lift comes from:
 
 ---
 
+## Newton’s Laws — easy version (write this)
+
+**Ref: FAA-H-8083-30B pp. 5-16 to 5-17**
+
+Think of Newton’s laws as rules about **how things move** when you push them.
+
+### 1st Law — “Lazy law” (Inertia)
+**Stuff keeps doing what it’s already doing.**
+
+- Sitting still → stays still  
+- Moving → keeps moving in a straight line  
+
+…until something **pushes or pulls** it (a **force**).
+
+| Example | What’s happening |
+|---------|------------------|
+| Plane parked with brakes set | Stays put (inertia of rest) |
+| Plane flying straight | Wants to keep going straight |
+| You hit the brakes | You feel thrown forward — your body still wants to move |
+
+**Word to write:** **Inertia** = resistance to change in motion.
+
+### 2nd Law — “Push harder / heavier is harder” (F = m a)
+**Force = mass × acceleration**
+
+Labels:
+- **Force (F)** = the push/pull  
+- **Mass (m)** = how much “stuff” / how hard it is to speed up  
+- **Acceleration (a)** = speeding up, slowing down, or turning (change in velocity)
+
+| If this… | Then this… |
+|----------|------------|
+| Bigger **force**, same mass | Faster **acceleration** |
+| Bigger **mass**, same force | Slower **acceleration** |
+
+**Airplane talk:** Same thrust on a light plane accelerates more than on a heavy plane.
+
+**Calculator:** `F = m × a` → `mass × accel =`  
+Or find a: `a = F ÷ m` → `force ÷ mass =`
+
+### 3rd Law — “Push back” (Action / Reaction)
+**When you push on something, it pushes back on you the same amount the other way.**
+
+| Action | Reaction |
+|--------|----------|
+| Prop / jet pushes **air backward** | Air pushes **plane forward** (**thrust**) |
+| Tires push **ground backward** | Ground pushes **plane forward** |
+| Wing pushes **air down** | Air pushes **wing up** (**lift**) |
+
+**Memory:** Action ↓ / backward → Reaction ↑ / forward (equal size, opposite direction).
+
+### Super-short cheat row
+| Law | Easy line | Airplane |
+|-----|-----------|----------|
+| **1st** | Keep doing what you’re doing | Needs force to start, stop, or turn |
+| **2nd** | F = m a (harder push or lighter mass → more accel) | Heavy plane needs more thrust to accelerate |
+| **3rd** | Push ↔ get pushed back | Prop pushes air back → plane goes forward |
+
+### Tiny story that ties all 3
+1. Plane sits still (**1st**).  
+2. Throttle up — thrust > drag, so it accelerates (**2nd**).  
+3. Engine/prop pushes air back; air pushes plane forward (**3rd**).  
+
+---
+
 ## Extra notebook must-writes (don’t skip)
 
 These show up a lot on Block 01 / ACS **AM.I.J** and fill gaps beyond the main formulas.
