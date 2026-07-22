@@ -41,6 +41,55 @@ Copy the **cheat rows** and **definitions** into your notebook. Label each part 
 
 ---
 
+## Calculator entry (how to punch formulas)
+
+Use a basic 4-function calculator (or phone calc in **portrait** / basic mode).  
+Key legend: `×` multiply · `÷` divide · `+` add · `−` subtract · `=` equals · `(` `)` parentheses if your calc has them
+
+**Rules**
+1. Write the formula and **label** each number first.
+2. Enter numbers in the **same order** as the formula.
+3. For squares: `v × v` (example: velocity squared).
+4. For ½: type `0.5 ×` or `1 ÷ 2 ×`.
+5. Gas-law “find the missing one”: do the **multiply side**, then **divide** by the known leftover.
+
+### Master cheat row — labels + calculator keys
+
+| Formula | Labels | Calculator entry (example numbers) |
+|---------|--------|-------------------------------------|
+| Density = m ÷ V | **mass** ÷ **volume** | `20 ÷ 4 =` → **5** |
+| F = m × a | **mass** × **acceleration** | `10 × 3 =` → **30** |
+| Work = F × d | **force** × **distance** | `50 × 4 =` → **200** |
+| Power = W ÷ t | **work** ÷ **time** | `200 ÷ 5 =` → **40** |
+| HP = (F × d) ÷ (550 × t) | **force**, **distance**, **time** | `550 × 10 ÷ 550 ÷ 2 =` → **5** *(or)* `( 550 × 10 ) ÷ ( 550 × 2 ) =` |
+| Torque = F × r | **force** × **radius/arm** | `40 × 2 =` → **80** |
+| Pressure = F ÷ A | **force** ÷ **area** | `100 ÷ 4 =` → **25** |
+| MA = R ÷ E | **resistance** ÷ **effort** | `200 ÷ 50 =` → **4** |
+| PE = W × h | **weight** × **height** | `100 × 6 =` → **600** |
+| KE = ½ m v² | **mass**, **velocity** | `0.5 × 4 × 5 × 5 =` → **50** |
+| °F = (°C × 1.8) + 32 | **Celsius** | `15 × 1.8 + 32 =` → **59** |
+| °C = (°F − 32) ÷ 1.8 | **Fahrenheit** | `59 − 32 ÷ 1.8 =` ⚠️ better: `( 59 − 32 ) ÷ 1.8 =` → **15** |
+| Boyle find P₂: P₂ = (P₁ × V₁) ÷ V₂ | **P1**, **V1**, **V2** | `30 × 4 ÷ 6 =` → **20** |
+| Boyle find V₂: V₂ = (P₁ × V₁) ÷ P₂ | **P1**, **V1**, **P2** | `30 × 4 ÷ 20 =` → **6** |
+| Charles find V₂: V₂ = (V₁ × T₂) ÷ T₁ | **V1**, **T2**, **T1** | `10 × 600 ÷ 300 =` → **20** |
+| Charles find T₂: T₂ = (V₂ × T₁) ÷ V₁ | **V2**, **T1**, **V1** | `20 × 300 ÷ 10 =` → **600** |
+| Combined find P₂ | **P1 V1 T2 / V2 T1** | `20 × 4 × 600 ÷ 5 ÷ 300 =` → **32** |
+| Absolute pressure | **gauge** + **14.7** | `30 + 14.7 =` → **44.7** |
+| Gear ratio | **teeth driven** ÷ **teeth drive** | `60 ÷ 20 =` → **3** |
+
+**HP without parentheses (safe order):**  
+`force × distance ÷ 550 ÷ time =`  
+Example: force 550, distance 10, time 2 → `550 × 10 ÷ 550 ÷ 2 =` → **5 HP**
+
+**°C without messing up order:**  
+Always do subtract first: `( F − 32 ) ÷ 1.8`  
+Or: `F − 32 =` → then `÷ 1.8 =`
+
+**Half / square tip for KE:**  
+`0.5 × mass × velocity × velocity =`
+
+---
+
 ## 1) Matter & Density
 **Ref: FAA-H-8083-30B pp. 5-1 to 5-2**
 
@@ -58,10 +107,10 @@ Copy the **cheat rows** and **definitions** into your notebook. Label each part 
 
 **Cheat row**
 
-| Idea | Formula | Labels |
-|------|---------|--------|
-| Density | D = m / V | **mass** / **volume** |
-| Specific gravity | SG = D_substance / D_water | compare to water |
+| Idea | Formula | Labels | Calculator |
+|------|---------|--------|------------|
+| Density | D = m / V | **mass** / **volume** | `mass ÷ volume =` |
+| Specific gravity | SG = D_substance / D_water | compare to water | `D_substance ÷ D_water =` |
 
 ---
 
@@ -81,10 +130,10 @@ Energy can change form, but total energy is conserved (minus losses to heat/fric
 
 **Cheat row**
 
-| Energy | Formula | Labels |
-|--------|---------|--------|
-| Potential | PE = W × h | **weight** × **height** |
-| Kinetic | KE = ½ m v² | **mass**, **velocity** |
+| Energy | Formula | Labels | Calculator |
+|--------|---------|--------|------------|
+| Potential | PE = W × h | **weight** × **height** | `weight × height =` |
+| Kinetic | KE = ½ m v² | **mass**, **velocity** | `0.5 × mass × v × v =` |
 
 ---
 
@@ -108,13 +157,13 @@ Energy can change form, but total energy is conserved (minus losses to heat/fric
 
 **Cheat row**
 
-| Idea | Formula | Labels |
-|------|---------|--------|
-| Force | F = m a | **mass** × **acceleration** |
-| Work | W = F d | **force** × **distance** |
-| Power | P = W / t | **work** ÷ **time** |
-| Horsepower | HP = (F × d) / (550 × t) | force, distance, time |
-| Torque | T = F × r | **force** × **radius/arm** |
+| Idea | Formula | Labels | Calculator |
+|------|---------|--------|------------|
+| Force | F = m a | **mass** × **acceleration** | `mass × accel =` |
+| Work | W = F d | **force** × **distance** | `force × distance =` |
+| Power | P = W / t | **work** ÷ **time** | `work ÷ time =` |
+| Horsepower | HP = (F × d) / (550 × t) | force, distance, time | `F × d ÷ 550 ÷ t =` |
+| Torque | T = F × r | **force** × **radius/arm** | `force × radius =` |
 
 ---
 
@@ -168,11 +217,11 @@ Drive and driven gears turn **opposite** directions (external mesh).
 
 **Cheat row**
 
-| Machine | Formula / idea | Labels |
-|---------|----------------|--------|
-| MA | resistance ÷ effort | **resistance force**, **effort force** |
-| Lever | E × EA = R × RA | **effort**, **effort arm**, **resistance**, **resistance arm** |
-| Gears | GR = teeth_driven / teeth_drive | **drive**, **driven** |
+| Machine | Formula / idea | Labels | Calculator |
+|---------|----------------|--------|------------|
+| MA | resistance ÷ effort | **resistance force**, **effort force** | `R ÷ E =` |
+| Lever | E × EA = R × RA | **effort**, **effort arm**, **resistance**, **resistance arm** | to find E: `R × RA ÷ EA =` |
+| Gears | GR = teeth_driven / teeth_drive | **drive**, **driven** | `teeth_driven ÷ teeth_drive =` |
 
 ---
 
@@ -216,10 +265,10 @@ Drive and driven gears turn **opposite** directions (external mesh).
 
 **Cheat row**
 
-| Convert | Formula |
-|---------|---------|
-| C → F | F = (C × 1.8) + 32 |
-| F → C | C = (F − 32) / 1.8 |
+| Convert | Formula | Calculator |
+|---------|---------|------------|
+| C → F | F = (C × 1.8) + 32 | `C × 1.8 + 32 =` |
+| F → C | C = (F − 32) / 1.8 | `( F − 32 ) ÷ 1.8 =` |
 
 ---
 
@@ -238,10 +287,10 @@ Absolute ≈ Gauge + Atmospheric (≈ 14.7 psi at sea level)
 
 **Cheat row**
 
-| Idea | Formula | Labels |
-|------|---------|--------|
-| Pressure | P = F / A | **force** ÷ **area** |
-| Absolute | P_abs ≈ P_gauge + 14.7 | gauge + atmosphere |
+| Idea | Formula | Labels | Calculator |
+|------|---------|--------|------------|
+| Pressure | P = F / A | **force** ÷ **area** | `F ÷ A =` |
+| Absolute | P_abs ≈ P_gauge + 14.7 | gauge + atmosphere | `gauge + 14.7 =` |
 
 ---
 
@@ -258,11 +307,11 @@ Always use **absolute temperature** with gas laws.
 
 **Cheat row**
 
-| Law | Holds constant | Formula |
-|-----|----------------|---------|
-| Boyle | Temperature | P₁V₁ = P₂V₂ |
-| Charles | Pressure | V₁/T₁ = V₂/T₂ |
-| Combined | — | P₁V₁/T₁ = P₂V₂/T₂ |
+| Law | Holds constant | Formula | Calculator (solve for missing) |
+|-----|----------------|---------|--------------------------------|
+| Boyle | Temperature | P₁V₁ = P₂V₂ | P₂: `P1 × V1 ÷ V2 =` · V₂: `P1 × V1 ÷ P2 =` |
+| Charles | Pressure | V₁/T₁ = V₂/T₂ | V₂: `V1 × T2 ÷ T1 =` · T₂: `V2 × T1 ÷ V1 =` |
+| Combined | — | P₁V₁/T₁ = P₂V₂/T₂ | P₂: `P1 × V1 × T2 ÷ V2 ÷ T1 =` |
 
 ---
 
@@ -331,21 +380,21 @@ Lift comes from:
 
 ## Master Formula Cheat Sheet (one notebook page)
 
-| # | Formula |
-|---|---------|
-| 1 | Density = m / V |
-| 2 | F = m a |
-| 3 | Work = F × d |
-| 4 | Power = Work / t |
-| 5 | HP = (F × d) / (550 × t) |
-| 6 | Torque = F × r |
-| 7 | P = F / A |
-| 8 | MA = resistance / effort |
-| 9 | Boyle: P₁V₁ = P₂V₂ |
-| 10 | Charles: V₁/T₁ = V₂/T₂ |
-| 11 | Combined: P₁V₁/T₁ = P₂V₂/T₂ |
-| 12 | F = (C × 1.8) + 32 |
-| 13 | C = (F − 32) / 1.8 |
+| # | Formula | Labels | Calculator keys |
+|---|---------|--------|-----------------|
+| 1 | Density = m / V | mass ÷ volume | `m ÷ V =` |
+| 2 | F = m a | mass × accel | `m × a =` |
+| 3 | Work = F × d | force × distance | `F × d =` |
+| 4 | Power = Work / t | work ÷ time | `W ÷ t =` |
+| 5 | HP = (F × d) / (550 × t) | force, distance, time | `F × d ÷ 550 ÷ t =` |
+| 6 | Torque = F × r | force × radius | `F × r =` |
+| 7 | P = F / A | force ÷ area | `F ÷ A =` |
+| 8 | MA = resistance / effort | resistance ÷ effort | `R ÷ E =` |
+| 9 | Boyle → P₂ | (P₁×V₁)÷V₂ | `P1 × V1 ÷ V2 =` |
+| 10 | Charles → V₂ | (V₁×T₂)÷T₁ | `V1 × T2 ÷ T1 =` |
+| 11 | Combined → P₂ | P₁V₁T₂ / V₂T₁ | `P1 × V1 × T2 ÷ V2 ÷ T1 =` |
+| 12 | °F from °C | (C×1.8)+32 | `C × 1.8 + 32 =` |
+| 13 | °C from °F | (F−32)÷1.8 | `( F − 32 ) ÷ 1.8 =` |
 
 ---
 
@@ -362,4 +411,4 @@ Lift comes from:
 9. Pascal – pressure equal in confined fluid  
 10. Bernoulli – faster flow, lower pressure  
 
-_Last updated: 2026-07-22 — Block 01 Aviation Physics notebook summary with FAA-H-8083-30B page refs + study images_
+_Last updated: 2026-07-22 — added calculator keystrokes next to labels_
