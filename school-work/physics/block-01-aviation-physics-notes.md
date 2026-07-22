@@ -411,4 +411,91 @@ Lift comes from:
 9. Pascal – pressure equal in confined fluid  
 10. Bernoulli – faster flow, lower pressure  
 
-_Last updated: 2026-07-22 — added calculator keystrokes next to labels_
+---
+
+## Extra notebook must-writes (don’t skip)
+
+These show up a lot on Block 01 / ACS **AM.I.J** and fill gaps beyond the main formulas.
+
+### Absolute temperature (needed for gas laws)
+| Scale | How to get it | Calculator |
+|-------|---------------|------------|
+| **Kelvin (K)** | K = °C + 273 | `C + 273 =` |
+| **Rankine (°R)** | °R = °F + 460 | `F + 460 =` |
+
+Never use plain °F/°C alone in Boyle/Charles/combined — convert to absolute first.
+
+### Standard atmosphere (memorize)
+| Item | Value |
+|------|-------|
+| Sea-level temp | **15 °C** / **59 °F** |
+| Sea-level pressure | **29.92 inHg** / **14.7 psi** / **1013.2 mb** |
+| Rule of thumb | ~½ atmosphere pressure by **~18,000 ft** |
+
+### Density / pressure altitude (words)
+| Term | Meaning |
+|------|---------|
+| **Pressure altitude** | What altimeter shows when set to **29.92** |
+| **Density altitude** | Pressure altitude corrected for nonstandard **temperature** (and humidity effect) |
+| Hot / high / humid | Density altitude **up** → performance **down** |
+
+### Hydraulics (Pascal) — two pistons
+Same pressure on both sides: P = F ÷ A
+
+| Find | Labels | Calculator |
+|------|--------|------------|
+| Pressure | force ÷ area | `F ÷ A =` |
+| Big force F₂ | P × A₂ | `P × A2 =` |
+| Or in one go | F₂ = F₁ × (A₂ ÷ A₁) | `F1 × A2 ÷ A1 =` |
+
+### Venturi tube (Bernoulli skill)
+As fluid goes through the **narrow** part:
+- **Velocity ↑**
+- **Pressure ↓**
+
+### Efficiency
+Efficiency (%) = (output ÷ input) × 100  
+No machine is 100% (friction / heat losses).  
+Calculator: `output ÷ input × 100 =`
+
+### Friction types
+| Type | When |
+|------|------|
+| **Static** | Not moving yet (hardest to start) |
+| **Sliding / kinetic** | Already sliding |
+| **Rolling** | Wheels/rollers (usually least) |
+
+### Flight controls (ACS wants these)
+| Kind | Controls |
+|------|----------|
+| **Primary** | Aileron, Elevator, Rudder |
+| **Secondary** | Flaps, Trim tabs (spoilers / leading-edge devices as taught) |
+
+### Extra aero devices (write names)
+- **Vortex generators** — energize boundary layer / delay stall  
+- **Wing fences** — stop spanwise flow  
+- **Stall strips** — make root stall first (more predictable)
+
+### Aircraft axes
+| Axis | Runs | Motion name |
+|------|------|-------------|
+| **Longitudinal** | nose ↔ tail | **Roll** (ailerons) |
+| **Lateral** | wingtip ↔ wingtip | **Pitch** (elevator) |
+| **Vertical** | up ↔ down | **Yaw** (rudder) |
+
+### Units cheat (label units on every problem)
+| Idea | Common units |
+|------|----------------|
+| Force / weight | lb |
+| Distance | ft / in |
+| Work | ft·lb |
+| Power | ft·lb/sec or HP |
+| Pressure | psi |
+| Area | in² |
+| Time | sec |
+
+### Matter reminder (K12)
+If **temp ↑** (same pressure) → volume ↑ → density ↓  
+Hot air = less dense → worse engine/wing/prop performance
+
+_Last updated: 2026-07-22 — added extra notebook must-writes (absolute temp, std atm, hydraulics, controls, axes)_
