@@ -7,6 +7,7 @@ Notes, practice, and study guides organized by subject.
 | Folder | Topic |
 |--------|--------|
 | `math/` | Block 01 Math (fractions, percents, equations, etc.) |
+| `physics/` | Block 01 Aviation Physics — notebook notes + formulas |
 | `faa/` | FAA Chapter 3 and related aviation topics |
 | `math-preferred-methods.md` | Preferred solution methods by topic |
 
