@@ -8,7 +8,8 @@ Notes, practice, and study guides organized by subject.
 |--------|--------|
 | `math/` | Block 01 Math (fractions, percents, equations, etc.) |
 | `physics/` | Block 01 Aviation Physics — notebook notes + formulas |
-| `faa/` | FAA Chapter 3 and related aviation topics |
+| `faa/` | FAA handbook notes (Ch.3 math, Ch.10 NDT, etc.) |
+| `faa/ch-10-ndt-notebook-notes.md` | Full NDT / NDI notebook notes (8083-30A Ch.10) |
 | `math-preferred-methods.md` | Preferred solution methods by topic |
 
 ## How to use this folder
