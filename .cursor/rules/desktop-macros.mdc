@@ -1,0 +1,30 @@
+---
+description: Game/desktop macros — SendInput mouse, honest clicks, default = hotkey
+alwaysApply: true
+---
+
+# Desktop / game macros
+
+This workspace (and later PackMacro-style tools) automates **games** (Roblox, etc.). Follow these so we do not relearn the same bugs.
+
+## Mouse (always)
+
+- **Never** use `pyautogui.moveTo` / `SetCursorPos` as the way the **game** sees the cursor. The OS pointer moves; Roblox and many games ignore it until the user moves a physical mouse.
+- Use **Windows `SendInput` relative moves** plus **left `MOUSEEVENTF_LEFTDOWN` / `LEFTUP`** (see `DesktopMacroProject/raw_mouse.py`). Slide on X and Y, hover, then click.
+- Only log `LIVE click` after `GetCursorPos` is near the target **and** the left button packets were sent.
+- Do not click if the cursor is not already on the **game monitor**. Do not teleport.
+- Never click the **window Close (X)** or title bar. In-game overlay X only (dark Join Event style). Windowed (not exclusive fullscreen) must keep working.
+
+## Keys
+
+- Default Start/Stop hotkey is **`=`** (equals), global, works while the game is focused. Keep it configurable in the UI.
+- Game claim/buy may still use `E` as an in-game key.
+
+## UI / exe
+
+- Prefer windowed builds (no extra CMD). Do not kill/relaunch the app on every tiny tweak.
+- One-file PyInstaller on Python 3.14 has crashed with `Failed to import encodings module`. Prefer `python main.py` for local testing if the exe is broken.
+
+## Scope
+
+Apply whenever adding macros, clicks, hotkeys, or overlay tools in this repo or a sibling `*Macro*` folder.

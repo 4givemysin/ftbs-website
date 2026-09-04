@@ -1,0 +1,42 @@
+PackMacro pause handoff — 2026-09-04 ~10:43 AM
+
+HOW TO RESUME
+  cd C:\Users\Cars0\ftbs-website\DesktopMacroProject
+  python main.py
+  (Do NOT use PackMacro.exe until rebuilt — last onefile build crashed:
+   "Failed to start embedded python interpreter: Failed to import encodings module")
+
+WHAT WORKS
+- Sceptre K25 only. UI on the other monitor. Cursor + focus must be on K25 to click.
+- Auto-stop if cursor/tab leaves K25. No mouse off that screen.
+- Roblox SEES the mouse: Windows SendInput (raw_mouse.py), not pyautogui SetCursorPos.
+  Cursor slides on X/Y, hover, left mouseDown/Up. Log: `[LIVE click] x,y sendinput`
+- Spawn Pack: pedestal (bottom half) → full text → partial words. Keep Spawn Pack + belt + E in frame (angle need not be pixel-identical).
+- WARN → Okay → EVALUATE_BELT wait 1.2s then rarity (or All packs always E). No spawn on Okay tick.
+- Buy mode dropdown: Rebellion + rarity | All packs (test)
+- Never click Base / Plaza / Sell / Shop / Conveyor Settings.
+- Start/Stop hotkey default **=** (equals). Changeable in UI.
+- Close in-game overlay X is **OFF** (was matching Roblox window Close and killing the game).
+- Windowed Roblox is OK. Title bar / top-right Close is keepout even if overlay X is turned on later.
+- Auto-buffs / Items OFF by default.
+
+WHAT TO TEST NEXT
+- Phase 0: spawn actually registers in-game with SendInput; WARN Okay; rarity vs All packs.
+- Leave overlay-X checkbox unchecked until Join Event dismiss is proven safe.
+
+DO NOT
+- Click Base (knocks camera off the belt).
+- Rebuild/relaunch the exe in a loop.
+- Enable overlay X until we recrop a unique Join Event X.
+
+LATER (ROADMAP.md Phase 3)
+- Plaza → boss portal → cards/difficulty → fight → Base → walk forward + park camera.
+
+MONITORS
+- Game: Sceptre K25
+- PackMacro UI: other display
+
+FILES
+- DesktopMacroProject/*.py  (main, engine, actions, raw_mouse, interceptor, monitors, warn_loop, …)
+- .cursor/rules/desktop-macros.mdc  (SendInput + = hotkey for future macros)
+- ROADMAP.md

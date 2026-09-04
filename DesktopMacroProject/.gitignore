@@ -1,0 +1,15 @@
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+build/
+dist/
+*.spec
+selected_coords.json
+PackMacro.exe
+_crop_preview/
+_cand*
+cand_*
+debug_*.png
+_hud_*.png
+*.log

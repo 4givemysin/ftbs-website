@@ -1,0 +1,9 @@
+pyautogui
+pillow
+opencv-python
+numpy
+pynput
+keyboard
+mss
+# Build (optional): python -m pip install pyinstaller
+# Then run build_exe.bat

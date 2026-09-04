@@ -1,0 +1,10 @@
+2026-09-04 ~10:43 AM — paused; resume later with: python main.py
+
+running: no (user pausing)
+dry-run default: OFF
+auto-buffs: OFF
+overlay X: OFF (was closing Roblox)
+hotkey: =
+
+works: SendInput mouse (game sees it), K25 lock, auto-stop off-screen, no Base click, WARN wait then belt, Buy mode dropdown, windowed OK
+next: Phase 0 spawn/WARN/buy live test; do not use broken PackMacro.exe (encodings crash)
